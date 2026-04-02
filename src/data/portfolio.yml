@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Héctor Mauricio Zamudio Domínguez
+  headline: "Fullstack Developer | Node.js · React/Next.js · AWS · Flutter"
+  location: "Zacatecas, Mexico"
+  email: zamudio1243@gmail.com
+  social_networks:
+    - network: LinkedIn
+      username: hectorzamdom
+
+  sections:
+    perfil:
+      - "Desarrollador Fullstack con experiencia construyendo productos de principio a fin: desde APIs robustas y arquitecturas serverless en AWS hasta interfaces modernas con React y Next.js. Con trayectoria en proyectos para logística, RRHH, inmobiliaria, e-commerce y movilidad, aporto visión técnica integral para entregar soluciones escalables y de alto impacto."
+
+    experiencia_profesional:
+      - company: "Bambú Tech Services (antes Bambú Mobile)"
+        position: Backend Developer
+        start_date: 2023-09
+        end_date: present
+        highlights:
+          - "Inicié el proceso de migración de un TMS (Transportation Management System) crítico de **Grupo Estrella Roja** hacia una nueva arquitectura serverless, diseñada para gestionar la totalidad de sus operaciones logísticas."
+          - "Desarrollé el backend integral para un sistema interno de RRHH, automatizando la gestión de tareas, solicitudes de vacaciones, control de altas y bajas, y la generación de reportes de costos de proyectos."
+          - "Implementé un sistema de encuestas de satisfacción para clientes y empleados, analizados y clusterizados con AI."
+          - "Diseñé y construí el backend para un sistema de control de accesos en parques industriales, integrando webhooks con cámaras Hikvision para el monitoreo en tiempo real de vehículos y paquetes de **Proximity Parks**."
+          - "Lideré la migración de una base de datos productiva de un entorno dockerizado en EC2 hacia Amazon RDS, mejorando la escalabilidad, seguridad y eficiencia operativa para **Grupo Excelencia**."
+          - "Creé el backend para una aplicación móvil de lealtad (**App Rendilitros**), gestionando el alta de usuarios y procesando transacciones para la acumulación de puntos."
+          - "Desarrollé y mantuve el backend para el CMS y blog de la inmobiliaria **Javer**, apoyando además en el frontend con Next.js en la implementación de componentes y diseño de vistas."
+          - "Implementé un sistema backend para la gestión de flotas y líneas de crédito en la gasolinera **Permergas**, generando reportes de cobro y automatizando la suspensión de servicio por falta de pago."
+          - "Implementé prácticas de CI/CD con GitHub Actions para mejorar la eficiencia en la entrega de software, reduciendo errores y tiempos de entrega."
+          - "Tech stack: AWS, NestJS, Express, Serverless, OpenAI, LangChain"
+
+      - company: Overclock Studios SA de CV
+        position: Fullstack Developer
+        start_date: 2022-02
+        end_date: 2023-09
+        highlights:
+          - "Desarrollé un sistema de facturación y control de inventario completo utilizando Node.js, TypeScript y GraphQL, automatizando un proceso manual y reduciendo notablemente los tiempos de sincronización."
+          - "Construí el backend y el frontend (Vue.js + Nuxt.js) para el e-commerce de ropa de **Codisa**, y lideré la migración de la pasarela de pagos de Stripe a OpenPay (BBVA), tanto en back como en front."
+          - "Tech stack: Strapi CMS, Vue.js, Nuxt.js, Stripe, OpenPay, Digital Ocean."
+
+      - company: UGUSOFT S de RL
+        position: Desarrollador Móvil
+        start_date: 2021-02
+        end_date: 2022-02
+        highlights:
+          - "Desarrollé dos aplicaciones móviles de ride-sharing desde cero: una nativa para Android con Jetpack Compose y otra multiplataforma con Flutter."
+          - "Implementé la comunicación con el backend a través de APIs GraphQL para garantizar un intercambio de datos eficiente."
+          - "Capacité y mentoricé a becarios de nuevo ingreso, supervisando su desarrollo técnico y asignando tareas para acelerar su integración en los proyectos."
+          - "Tech stack: Flutter, Jetpack Compose"
+
+    educación:
+      - institution: Instituto Politécnico Nacional
+        area: Ingeniería en Sistemas Computacionales
+        degree: Ing.
+        start_date: 2017-06
+        end_date: 2021-12
+
+    certificaciones:
+      - name: AWS Cloud Practitioner
+        date: "Noviembre 2024"
+      - name: "Claude Code in Action"
+        date: "2026-03-27"
+      - name: "Next.js App Router Fundamentals"
+        date: "2026-03-23"
+
+    skills:
+      - label: Lenguajes
+        details: "TypeScript, Kotlin, Python, Dart"
+      - label: Backend
+        details: "Node.js, NestJS, Express, GraphQL, Serverless Framework"
+      - label: Frontend
+        details: "React, Next.js, Vue.js, Nuxt.js, Tailwind CSS, TanStack Query, TanStack Start"
+      - label: Cloud
+        details: "AWS (certificado): EC2, S3, Lambda, SNS, SQS, EventBridge, API Gateway, Cognito · Google Cloud · Digital Ocean · Docker"
+      - label: Mobile
+        details: "Flutter, Jetpack Compose"
+      - label: Bases de Datos
+        details: "PostgreSQL, MySQL, SQL Server"
+      - label: Testing y DevOps
+        details: "Jest, JUnit, GitHub Actions, CI/CD"
+      - label: AI Tools
+        details: "Claude Code, OpenCode, OpenAI API, LangChain"
+      - label: Idiomas
+        details: "Español (Nativo), Inglés (487 TOEFL ITP)"
+      - label: Metodologías
+        details: "Desarrollo Ágil, Git"
+
+design:
+  theme: harvard
+
+locale:
+  language: spanish

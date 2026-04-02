@@ -17,7 +17,7 @@ export function ProjectCard(project: Project) {
       <img
         src={project.image}
         alt={project.title}
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+        className="relative z-20 aspect-video w-full object-cover "
       />
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
