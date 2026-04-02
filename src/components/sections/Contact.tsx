@@ -4,8 +4,8 @@
 
 export default function Contact() {
   return (
-    <section id="contact" className="page-wrap px-4 py-16">
-      <p className="island-kicker mb-2">Contact</p>
+    <section id="contact" className="mx-auto w-full max-w-[1080px] px-4 py-16">
+      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Contact</p>
       {/* Build your contact section here */}
     </section>
   )

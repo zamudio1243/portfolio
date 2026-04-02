@@ -13,7 +13,7 @@ import {
 export function ProjectCard(project: Project) {
   return (
     <Card className="relative mx-auto w-full max-w-sm pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <div className="absolute inset-0 z-30 aspect-video bg-foreground/15" />
       <img
         src={project.image}
         alt={project.title}
@@ -26,7 +26,7 @@ export function ProjectCard(project: Project) {
       <CardFooter>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <Badge key={tag}>{tag}</Badge>
+            <Badge className="bg-primary text-accent" key={tag}>{tag}</Badge>
           ))}
         </div>
       </CardFooter>
