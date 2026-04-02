@@ -1,4 +1,4 @@
-import { portfolioData } from '#/data'
+import { portfolioData } from '#/data/portfolio'
 import ThemeToggle from './ThemeToggle'
 
 export default function Header() {

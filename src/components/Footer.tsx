@@ -1,5 +1,6 @@
+import { portfolioData } from '#/data/portfolio';
 import { Github, Linkedin, Twitter } from 'lucide-react'
-import { portfolioData } from '#/data'
+
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; 'aria-hidden'?: boolean }>> = {
   GitHub: Github,

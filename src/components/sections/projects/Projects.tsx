@@ -3,11 +3,17 @@
 //            portfolioData.projectCategories (filter buttons),
 //            portfolioData.projects (cards: title, description, image, tags, category, liveUrl, repoUrl)
 
-export default function Projects() {
+import type { PortfolioData, } from "#/data/interfaces/data";
+import { ProjectCard } from "./ProjectCard";
+
+type Props = Pick<PortfolioData, "projects" | "projectCategories" | "skills">;
+export default function Projects({ projects }: Props) {
   return (
     <section id="projects" className="page-wrap px-4 py-16">
       <p className="island-kicker mb-2">Projects</p>
-      {/* Build your projects & skills section here */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => ProjectCard(project))}
+      </div>
     </section>
   )
 }
