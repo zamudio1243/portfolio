@@ -5,6 +5,9 @@ export default function Hero() {
   const { personal } = portfolioData;
   return (
     <section className="mx-auto w-full max-w-270 px-4 pt-20 pb-8">
+      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+        01 // Introducción
+      </p>
       <h1 className="text-6xl md:text-[5rem] font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
         Hey, I'm <span className="text-primary">{personal.name}</span>
       </h1>

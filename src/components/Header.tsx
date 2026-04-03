@@ -1,5 +1,5 @@
 import { portfolioData } from '#/data/portfolio'
-import ThemeToggle from './ThemeToggle'
+import { PortfolioThemeSwitcher } from './ThemeSwitcher'
 
 export default function Header() {
   const { personal } = portfolioData
@@ -41,8 +41,8 @@ export default function Header() {
           >
             Download CV
           </a>
-          <ThemeToggle />
         </div>
+        <PortfolioThemeSwitcher />
       </nav>
     </header>
   )

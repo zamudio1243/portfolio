@@ -12,12 +12,12 @@ import {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-foreground/15" />
+    <Card className="group relative mx-auto w-full max-w-sm pt-0 transition-transform duration-500 hover:-translate-y-1">
+      <div className="absolute inset-0 z-30 aspect-video bg-foreground/15 transition-opacity duration-500 group-hover:opacity-0" />
       <img
         src={project.image}
         alt={project.title}
-        className="relative z-20 aspect-video w-full object-cover "
+        className="relative z-20 aspect-video w-full object-cover grayscale-25 transition-all duration-500 group-hover:grayscale-0 "
       />
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
