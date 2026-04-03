@@ -42,7 +42,10 @@ export interface PersonalInfo {
 export interface Certification {
   title: string;
   issuer: string;
+  image?: string;
+  imageBg?: string;
   date?: string;
+  expiresDate?: string;
   credentialUrl?: string;
 }
 

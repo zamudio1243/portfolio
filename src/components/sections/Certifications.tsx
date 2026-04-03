@@ -23,9 +23,22 @@ export default function Certifications({ certifications }: Props) {
             key={cert.title}
             className="group rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-secondary">
-              <Award className="h-5 w-5 text-primary" />
-            </div>
+            {cert.image ? (
+              <div
+                className="mb-4 flex h-10 w-10 items-center justify-center rounded-md"
+                style={cert.imageBg ? { backgroundColor: cert.imageBg } : undefined}
+              >
+                <img
+                  src={cert.image}
+                  alt={cert.issuer}
+                  className="h-7 w-7 object-contain"
+                />
+              </div>
+            ) : (
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-secondary">
+                <Award className="h-5 w-5 text-primary" />
+              </div>
+            )}
 
             <h3 className="text-base font-bold text-foreground mb-1">
               {cert.title}
@@ -34,7 +47,10 @@ export default function Certifications({ certifications }: Props) {
               {cert.issuer}
             </p>
             {cert.date && (
-              <p className="text-xs text-muted-foreground mb-4">{cert.date}</p>
+              <p className="text-xs text-muted-foreground mb-4">
+                {cert.date}
+                {cert.expiresDate && ` · Expira ${cert.expiresDate}`}
+              </p>
             )}
 
             {cert.credentialUrl && (

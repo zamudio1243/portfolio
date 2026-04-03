@@ -153,8 +153,29 @@ export const portfolioData: PortfolioData = {
     {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2024",
-      credentialUrl: "#",
+      image: "/aws.png",
+      imageBg: "#FFFFFF",
+      date: "Nov 2024",
+      expiresDate: "Nov 2027",
+      credentialUrl:
+        "https://www.credly.com/badges/346d3735-57be-45e8-9071-2e198a8ca92c/linked_in_profile",
+    },
+    {
+      title: "Claude Code in Action",
+      issuer: "Anthropic",
+      image: "/anthropic.png",
+      imageBg: "#D4A27F",
+      date: "Mar 2025",
+      credentialUrl: "https://verify.skilljar.com/c/6uioxjogoy6b",
+    },
+    {
+      title: "Next.js App Router Fundamentals",
+      issuer: "Vercel",
+      image: "/vercel.svg",
+      imageBg: "#FFFFFF",
+      date: "Mar 2025",
+      credentialUrl:
+        "https://nextjs.org/learn/certificate?course=dashboard-app&user=152306&certId=dashboard-app-152306-1774331035660",
     },
   ],
 };
