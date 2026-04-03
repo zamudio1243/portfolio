@@ -23,7 +23,7 @@ export function ProjectCard(project: Project) {
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>{project.description}</CardDescription>
       </CardHeader>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <Badge className="bg-primary text-accent" key={tag}>{tag}</Badge>

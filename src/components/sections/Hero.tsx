@@ -5,7 +5,7 @@
 
 export default function Hero() {
   return (
-    <section className="mx-auto w-full max-w-[1080px] px-4 pt-20 pb-8">
+    <section className="mx-auto w-full max-w-270 px-4 pt-20 pb-8">
       {/* Build your hero section here */}
     </section>
   )
