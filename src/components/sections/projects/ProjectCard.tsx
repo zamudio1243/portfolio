@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function ProjectCard(project: Project) {
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="relative mx-auto w-full max-w-sm pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-foreground/15" />

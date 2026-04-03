@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import About from '#/components/sections/About'
-import Certifications from '#/components/sections/Certifications'
-import Contact from '#/components/sections/Contact'
+import About from '#/components/sections/about/About'
+import Certifications from '#/components/sections/certifications/Certifications'
+import Contact from '#/components/sections/contact/Contact'
 import Hero from '#/components/sections/hero/Hero'
 import Projects from '#/components/sections/projects/Projects'
 import { portfolioData } from '#/data/portfolio'
@@ -9,13 +9,12 @@ import { portfolioData } from '#/data/portfolio'
 export const Route = createFileRoute('/')({ component: Home })
 
 function Home() {
-  const data = portfolioData
   return (
     <main>
-      <Hero personal={data.personal} />
+      <Hero />
       <About />
-      <Projects projects={data.projects} projectCategories={data.projectCategories} skills={data.skills} />
-      <Certifications certifications={data.certifications} />
+      <Projects />
+      <Certifications />
       <Contact />
     </main>
   )

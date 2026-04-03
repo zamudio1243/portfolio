@@ -1,12 +1,8 @@
-// import { portfolioData } from '#/data'
-// Available: portfolioData.personal.name, portfolioData.personal.role,
-//            portfolioData.personal.headline, portfolioData.personal.subtitle,
+import { portfolioData } from "#/data/portfolio";
 
-import type { PortfolioData } from "#/data/interfaces/data";
 
-type Props = Pick<PortfolioData, "personal">;
-
-export default function Hero({ personal }: Props) {
+export default function Hero() {
+  const { personal } = portfolioData;
   return (
     <section className="mx-auto w-full max-w-270 px-4 pt-20 pb-8">
       <h1 className="text-6xl md:text-[5rem] font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
