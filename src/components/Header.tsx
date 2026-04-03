@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 px-4 backdrop-blur-lg">
-      <nav className="mx-auto w-full max-w-[1080px] flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
+      <nav className="mx-auto w-full max-w-270 flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
         <h2 className="m-0 shrink-0 text-base font-semibold tracking-tight">
           <a
             href="#"
