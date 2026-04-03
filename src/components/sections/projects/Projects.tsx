@@ -7,6 +7,7 @@ import type { PortfolioData, } from "#/data/interfaces/data";
 import { ProjectCard } from "./ProjectCard";
 
 type Props = Pick<PortfolioData, "projects" | "projectCategories" | "skills">;
+
 export default function Projects({ projects }: Props) {
   return (
     <section id="projects" className="mx-auto w-full max-w-270 px-4 py-16">

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import About from '#/components/sections/About'
 import Contact from '#/components/sections/Contact'
-import Hero from '#/components/sections/Hero'
+import Hero from '#/components/sections/hero/Hero'
 import Projects from '#/components/sections/projects/Projects'
 import { portfolioData } from '#/data/portfolio'
 
@@ -11,7 +11,7 @@ function Home() {
   const data = portfolioData
   return (
     <main>
-      <Hero />
+      <Hero personal={data.personal} />
       <About />
       <Projects projects={data.projects} projectCategories={data.projectCategories} skills={data.skills} />
       <Contact />
