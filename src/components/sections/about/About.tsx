@@ -1,8 +1,7 @@
 import { portfolioData } from "#/data/portfolio";
-import { Badge } from "@/components/ui/badge";
 
 export default function About() {
-  const { personal, skillHighlights, skills } = portfolioData;
+  const { personal, skillHighlights } = portfolioData;
 
   return (
     <section id="about" className="mx-auto w-full max-w-270 px-4 py-20">
@@ -53,17 +52,7 @@ export default function About() {
             className="w-full aspect-4/5 rounded-lg border border-border object-cover grayscale hover:grayscale-0 transition-all duration-700"
           />
 
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <Badge
-                key={skill.name}
-                variant="secondary"
-                className="text-xs font-medium"
-              >
-                {skill.name}
-              </Badge>
-            ))}
-          </div>
+
         </div>
       </div>
     </section>

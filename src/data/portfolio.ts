@@ -31,7 +31,7 @@ export const portfolioData: PortfolioData = {
   skills: [
     { name: "TypeScript", category: "Frontend" },
     { name: "Node.js", category: "Backend" },
-    { name: "NestJs", category: "Backend" },
+    { name: "NestJS", category: "Backend" },
     { name: "Express.js", category: "Backend" },
     { name: "GraphQL", category: "Backend" },
     { name: "Serverless", category: "Backend" },
@@ -80,7 +80,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend para control de accesos en parques industriales con integración de webhooks a cámaras Hikvision para monitoreo en tiempo real.",
       image: "/proximity.jpg",
-      tags: ["NestJs", "TypeScript", "AWS"],
+      tags: ["NestJS", "TypeScript", "AWS"],
       category: "Backend",
     },
     {
@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Sistema de gestión de flotas y líneas de crédito para gasolinera: reportes de cobro automatizados y suspensión por falta de pago.",
       image: "/permergas.jpg",
-      tags: ["NestJs", "TypeScript", "PostgreSQL"],
+      tags: ["NestJS", "TypeScript", "PostgreSQL"],
       category: "Backend",
     },
     {
@@ -104,7 +104,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend para app móvil de lealtad de combustible: alta de usuarios y procesamiento de transacciones para acumulación de puntos.",
       image: "/rendichicas.jpg",
-      tags: ["NestJs", "TypeScript", "PostgreSQL"],
+      tags: ["NestJS", "TypeScript", "PostgreSQL"],
       category: "Backend",
     },
     {
@@ -112,7 +112,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend integral para sistema interno de RRHH: gestión de tareas, solicitudes de vacaciones, altas/bajas y reportes de costos de proyectos con análisis por IA.",
       image: "/bambu.jpg",
-      tags: ["NestJs", "TypeScript", "AWS", "OpenAI"],
+      tags: ["NestJS", "TypeScript", "AWS", "OpenAI"],
       category: "Backend",
     },
     {
@@ -120,7 +120,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Migración de un TMS crítico hacia una nueva arquitectura serverless en AWS, diseñada para gestionar la totalidad de las operaciones logísticas.",
       image: "/estrella_roja.jpg",
-      tags: ["NestJs", "TypeScript", "Serverless", "AWS"],
+      tags: ["NestJS", "TypeScript", "Serverless", "AWS"],
       category: "Backend",
     },
     {
@@ -136,7 +136,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend para el CMS y blog de la inmobiliaria Javer, con soporte en frontend Next.js para implementación de componentes y diseño de vistas.",
       image: "/javer.jpg",
-      tags: ["NestJs", "TypeScript", "Next.js"],
+      tags: ["NestJS", "TypeScript", "Next.js"],
       category: "Web",
     },
     {

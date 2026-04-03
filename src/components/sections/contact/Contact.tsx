@@ -1,11 +1,12 @@
 import { portfolioData } from "#/data/portfolio";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { GithubIcon, LinkedinIcon, Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  GitHub: GithubIcon,
-  LinkedIn: LinkedinIcon,
+  GitHub: GitHubIcon,
+  LinkedIn: LinkedInIcon,
 };
 
 export default function Contact() {

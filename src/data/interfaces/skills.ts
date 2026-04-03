@@ -1,5 +1,5 @@
 export const skills = {
-  NestJs: "NestJs",
+  NestJS: "NestJS",
   React: "React",
   TypeScript: "TypeScript",
   TailwindCSS: "Tailwind CSS",

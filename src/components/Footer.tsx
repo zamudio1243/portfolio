@@ -1,11 +1,10 @@
 import { portfolioData } from '#/data/portfolio';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
+import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/icons'
 
-
-const iconMap: Record<string, React.ComponentType<{ size?: number; 'aria-hidden'?: boolean }>> = {
-  GitHub: GithubIcon,
-  LinkedIn: LinkedinIcon,
-  X: TwitterIcon,
+const iconMap: Record<string, React.ComponentType<{ className?: string; 'aria-hidden'?: boolean }>> = {
+  GitHub: GitHubIcon,
+  LinkedIn: LinkedInIcon,
+  X: XIcon,
 }
 
 export default function Footer() {
@@ -33,7 +32,7 @@ export default function Footer() {
               aria-label={link.label}
               className="rounded-xl p-2 text-muted-foreground transition hover:bg-accent hover:text-accent-foreground"
             >
-              <Icon size={24} aria-hidden />
+              <Icon className="h-6 w-6" aria-hidden />
             </a>
           )
         })}
