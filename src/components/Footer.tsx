@@ -1,11 +1,11 @@
 import { portfolioData } from '#/data/portfolio';
-import { Github, Linkedin, Twitter } from 'lucide-react'
+import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
 
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; 'aria-hidden'?: boolean }>> = {
-  GitHub: Github,
-  LinkedIn: Linkedin,
-  X: Twitter,
+  GitHub: GithubIcon,
+  LinkedIn: LinkedinIcon,
+  X: TwitterIcon,
 }
 
 export default function Footer() {

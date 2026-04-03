@@ -24,6 +24,9 @@ export default function Header() {
           <a href="#projects" className="text-foreground/70 hover:text-foreground transition-colors">
             Projects
           </a>
+          <a href="#certifications" className="text-foreground/70 hover:text-foreground transition-colors">
+            Certifications
+          </a>
           <a href="#contact" className="text-foreground/70 hover:text-foreground transition-colors">
             Contact
           </a>

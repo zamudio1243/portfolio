@@ -149,4 +149,12 @@ export const portfolioData: PortfolioData = {
     },
   ],
   projectCategories: ["All", "Web", "Backend", "Mobile"],
+  certifications: [
+    {
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "2024",
+      credentialUrl: "#",
+    },
+  ],
 };

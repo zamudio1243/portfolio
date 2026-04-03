@@ -39,6 +39,13 @@ export interface PersonalInfo {
   location?: string;
 }
 
+export interface Certification {
+  title: string;
+  issuer: string;
+  date?: string;
+  credentialUrl?: string;
+}
+
 export interface PortfolioData {
   personal: PersonalInfo;
   socialLinks: SocialLink[];
@@ -46,4 +53,5 @@ export interface PortfolioData {
   skillHighlights: SkillHighlight[];
   projects: Project[];
   projectCategories: Category[];
+  certifications: Certification[];
 }
