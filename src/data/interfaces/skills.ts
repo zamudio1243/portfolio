@@ -1,26 +1,42 @@
 export const skills = {
-  NestJS: "NestJS",
+  // Frontend
   React: "React",
-  TypeScript: "TypeScript",
-  TailwindCSS: "Tailwind CSS",
-  PostgreSQL: "PostgreSQL",
-  MySQL: "MySQL",
-  Docker: "Docker",
-  Git: "Git",
-  Nodejs: "Node.js",
-  ExpressJs: "Express.js",
-  AWS: "AWS",
-  Serverless: "Serverless",
-  GraphQL: "GraphQL",
   NextJs: "Next.js",
   VueJs: "Vue.js",
   NuxtJs: "Nuxt.js",
+  TailwindCSS: "Tailwind CSS",
+
+  // Backend
+  NestJS: "NestJS",
+  ExpressJs: "Express.js",
+  Nodejs: "Node.js",
+  NxDev: "Nx.dev",
+  GraphQL: "GraphQL",
+  Strapi: "Strapi",
+  TsEd: "Ts.ED",
+
+  // Mobile
   Flutter: "Flutter",
   JetpackCompose: "Jetpack Compose",
-  Strapi: "Strapi",
+
+  // Database
+  PostgreSQL: "PostgreSQL",
+  MySQL: "MySQL",
+  SQLServer: "SQL Server",
+
+  // DevOps & Infrastructure
+  Docker: "Docker",
+  AWS: "AWS",
+  Serverless: "Serverless",
+  GitHubActions: "GitHub Actions",
+  Git: "Git",
+
+  // Languages & Tools
+  TypeScript: "TypeScript",
+
+  // AI & ML
   OpenAI: "OpenAI",
   LangChain: "LangChain",
-  GitHubActions: "GitHub Actions",
 } as const;
 
 export type SkillName = (typeof skills)[keyof typeof skills];

@@ -68,19 +68,11 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      title: "Codisa E-Commerce",
+      title: "Migración TMS — Grupo Estrella Roja",
       description:
-        "E-commerce de ropa construido con Vue.js y Nuxt.js. Lideré la migración de la pasarela de pagos de Stripe a OpenPay (BBVA) en front y back.",
-      image: "/codisa.jpg",
-      tags: ["Vue.js", "Nuxt.js", "Node.js", "Strapi"],
-      category: "Web",
-    },
-    {
-      title: "Proximity Parks — Control de Accesos",
-      description:
-        "Backend para control de accesos en parques industriales con integración de webhooks a cámaras Hikvision para monitoreo en tiempo real.",
-      image: "/proximity.jpg",
-      tags: ["NestJS", "TypeScript", "AWS"],
+        "Migración de un TMS crítico hacia una nueva arquitectura serverless en AWS, diseñada para gestionar la totalidad de las operaciones logísticas.",
+      image: "/estrella_roja.jpg",
+      tags: ["NestJS", "Serverless", "AWS"],
       category: "Backend",
     },
     {
@@ -88,9 +80,26 @@ export const portfolioData: PortfolioData = {
       description:
         "Sistema de gestión de flotas y líneas de crédito para gasolinera: reportes de cobro automatizados y suspensión por falta de pago.",
       image: "/permergas.jpg",
-      tags: ["NestJS", "TypeScript", "PostgreSQL"],
+      tags: ["NestJS", "TypeScript", "SQL Server"],
       category: "Backend",
     },
+    {
+      title: "Javer — CMS & Blog Inmobiliaria",
+      description:
+        "Backend para el CMS y blog de la inmobiliaria Javer, con soporte en frontend Next.js para implementación de componentes y diseño de vistas.",
+      image: "/javer.jpg",
+      tags: ["Express.js", "Next.js"],
+      category: "Web",
+    },
+    {
+      title: "Proximity Parks — Control de Accesos",
+      description:
+        "Backend para control de accesos en parques industriales con integración de webhooks a cámaras Hikvision para monitoreo en tiempo real.",
+      image: "/proximity.jpg",
+      tags: ["Nx.dev", "TypeScript", "AWS"],
+      category: "Backend",
+    },
+
     {
       title: "Grupo Excelencia — Migración RDS",
       description:
@@ -104,7 +113,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend para app móvil de lealtad de combustible: alta de usuarios y procesamiento de transacciones para acumulación de puntos.",
       image: "/rendichicas.jpg",
-      tags: ["NestJS", "TypeScript", "PostgreSQL"],
+      tags: ["Express.js", "TypeScript", "PostgreSQL"],
       category: "Backend",
     },
     {
@@ -112,32 +121,24 @@ export const portfolioData: PortfolioData = {
       description:
         "Backend integral para sistema interno de RRHH: gestión de tareas, solicitudes de vacaciones, altas/bajas y reportes de costos de proyectos con análisis por IA.",
       image: "/bambu.jpg",
-      tags: ["NestJS", "TypeScript", "AWS", "OpenAI"],
+      tags: ["Nx.dev", "AWS", "OpenAI"],
       category: "Backend",
     },
     {
-      title: "Migración TMS — Grupo Estrella Roja",
+      title: "Codisa E-Commerce",
       description:
-        "Migración de un TMS crítico hacia una nueva arquitectura serverless en AWS, diseñada para gestionar la totalidad de las operaciones logísticas.",
-      image: "/estrella_roja.jpg",
-      tags: ["NestJS", "TypeScript", "Serverless", "AWS"],
-      category: "Backend",
+        "E-commerce de ropa construido con Vue.js y Nuxt.js. Lideré la migración de la pasarela de pagos de Stripe a OpenPay (BBVA) en front y back.",
+      image: "/codisa.jpg",
+      tags: ["Vue.js", "Nuxt.js", "Node.js", "Strapi"],
+      category: "Web",
     },
     {
       title: "Sistema de Facturación — Forprint",
       description:
         "Sistema completo de facturación y control de inventario con Node.js y GraphQL, automatizando procesos manuales y reduciendo tiempos de sincronización.",
       image: "/forprint.jpg",
-      tags: ["Node.js", "TypeScript", "GraphQL"],
+      tags: ["Ts.ED", "GraphQL"],
       category: "Backend",
-    },
-    {
-      title: "Javer — CMS & Blog Inmobiliaria",
-      description:
-        "Backend para el CMS y blog de la inmobiliaria Javer, con soporte en frontend Next.js para implementación de componentes y diseño de vistas.",
-      image: "/javer.jpg",
-      tags: ["NestJS", "TypeScript", "Next.js"],
-      category: "Web",
     },
     {
       title: "Apps Ride-Sharing — GMAR",
