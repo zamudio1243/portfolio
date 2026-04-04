@@ -17,3 +17,6 @@ todos.json
 
 # MCP
 .playwright-mcp
+
+# Paraglide generated
+src/paraglide

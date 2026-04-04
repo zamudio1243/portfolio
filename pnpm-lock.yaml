@@ -63,6 +63,9 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
     devDependencies:
+      '@inlang/paraglide-js':
+        specifier: ^2.15.1
+        version: 2.15.1
       '@netlify/vite-plugin-tanstack-start':
         specifier: ^1.3.2
         version: 1.3.2(@tanstack/react-start@1.167.16(crossws@0.4.4(srvx@0.11.14))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3)))(rollup@4.60.1)(srvx@0.11.14)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
@@ -925,6 +928,17 @@ packages:
   '@import-maps/resolve@2.0.0':
     resolution: {integrity: sha512-RwzRTpmrrS6Q1ZhQExwuxJGK1Wqhv4stt+OF2JzS+uawewpwNyU7EJL1WpBex7aDiiGLs4FsXGkfUBdYuX7xiQ==}
 
+  '@inlang/paraglide-js@2.15.1':
+    resolution: {integrity: sha512-7wWKbLWwLx1dkkYz55TnVp+39atKXf7rnlHnL8adSmM73UaAdB9fXDzo24GHSY/6FPGFKSkgHdT2qyJv2whWsA==}
+    hasBin: true
+
+  '@inlang/recommend-sherlock@0.2.1':
+    resolution: {integrity: sha512-ckv8HvHy/iTqaVAEKrr+gnl+p3XFNwe5D2+6w6wJk2ORV2XkcRkKOJ/XsTUJbPSiyi4PI+p+T3bqbmNx/rDUlg==}
+
+  '@inlang/sdk@2.9.1':
+    resolution: {integrity: sha512-y0C3xaKo6pSGDr3p5OdreRVT3THJpgKVe1lLvG3BE4v9lskp3UfI9cPCbN8X2dpfLt/4ljtehMb5SykpMfJrMg==}
+    engines: {node: '>=20.0.0'}
+
   '@inquirer/ansi@1.0.2':
     resolution: {integrity: sha512-S8qNSZiYzFd0wAcyG5AXCvUHC5Sr7xpZ9wZ2py9XR88jUz8wooStVx5M6dRzczbBWjic9NP7+rY0Xi7qqK/aMQ==}
     engines: {node: '>=18'}
@@ -983,6 +997,13 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lix-js/sdk@0.4.9':
+    resolution: {integrity: sha512-30mDkXpx704359oRrJI42bjfCspCiaMItngVBbPkiTGypS7xX4jYbHWQkXI8XuJ7VDB69D0MsVU6xfrBAIrM4A==}
+    engines: {node: '>=18'}
+
+  '@lix-js/server-protocol-schema@0.1.1':
+    resolution: {integrity: sha512-jBeALB6prAbtr5q4vTuxnRZZv1M2rKe8iNqRQhFJ4Tv7150unEa0vKyz0hs8Gl3fUGsWaNJBh3J8++fpbrpRBQ==}
 
   '@mapbox/node-pre-gyp@2.0.3':
     resolution: {integrity: sha512-uwPAhccfFJlsfCxMYTwOdVfOz3xqyj8xYL3zJj8f0pb30tLohnnFPhLuqp4/qoEz8sNxe4SESZedcBojRefIzg==}
@@ -2193,6 +2214,9 @@ packages:
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
+  '@sinclair/typebox@0.31.28':
+    resolution: {integrity: sha512-/s55Jujywdw/Jpan+vsy6JZs1z2ZTGxTmbZTPiuSL2wz9mfzA2gN1zzaqmvfi4pq+uOt7Du85fkiwv5ymW84aQ==}
+
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
@@ -2229,6 +2253,10 @@ packages:
     resolution: {integrity: sha512-AeGTBg8Wtkh/0s+evyLtP8piQoS4wyqqQaAFs2HJcFMMjYAtUgo+ZPduRXLjPlqKVc2ejeR544oeqpbn8Egn8A==}
     peerDependencies:
       solid-js: ^1.6.12
+
+  '@sqlite.org/sqlite-wasm@3.48.0-build4':
+    resolution: {integrity: sha512-hI6twvUkzOmyGZhQMza1gpfqErZxXRw6JEsiVjUbo7tFanVD+8Oil0Ih3l2nGzHdxPI41zFmfUQG7GHqhciKZQ==}
+    hasBin: true
 
   '@stylistic/eslint-plugin@5.10.0':
     resolution: {integrity: sha512-nPK52ZHvot8Ju/0A4ucSX1dcPV2/1clx0kLcH5wDmrE4naKso7TUC/voUyU1O9OTKTrR6MYip6LP0ogEMQ9jPQ==}
@@ -2968,6 +2996,9 @@ packages:
     resolution: {integrity: sha512-LHE+8BuR7RYGDKvnrmcuSq3tDcKv9OFEXQt/HpbZhY7V6h0zlUXutnAD82GiFx9rdieCMjkvtcsPqBwgUl1Iiw==}
     engines: {node: '>= 0.4'}
 
+  array-timsort@1.0.3:
+    resolution: {integrity: sha512-/+3GRL7dDAGEfM6TseQk/U+mi18TU2Ms9I3UlLdUMhz2hbvGNTKdj9xniwXfUqgYhHxRx0+8UnKkvlNwVU+cWQ==}
+
   array.prototype.flatmap@1.3.3:
     resolution: {integrity: sha512-Y7Wt51eKJSyi80hFrJCePGGNo5ktJCslFuboqJsbf57CCPcm5zztluPlc4/aD8sWsKvlwatezpV4U1efk8kpjg==}
     engines: {node: '>= 0.4'}
@@ -3274,6 +3305,10 @@ packages:
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
+  comment-json@4.6.2:
+    resolution: {integrity: sha512-R2rze/hDX30uul4NZoIZ76ImSJLFxn/1/ZxtKC1L77y2X1k+yYu1joKbAtMA2Fg3hZrTOiw0I5mwVMo0cf250w==}
+    engines: {node: '>= 6'}
+
   comment-parser@1.4.6:
     resolution: {integrity: sha512-ObxuY6vnbWTN6Od72xfwN9DbzC7Y2vv8u1Soi9ahRKL37gb6y1qk6/dgjs+3JWuXJHWvsg3BXIwzd/rkmAwavg==}
     engines: {node: '>= 12.0.0'}
@@ -3287,6 +3322,10 @@ packages:
 
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
+
+  consola@3.4.0:
+    resolution: {integrity: sha512-EiPU8G6dQG0GFHNR8ljnZFki/8a+cQwEQ+7wpxdChl02Q8HXlwEZWD5lqAF8vC2sEC3Tehr8hy7vErz88LHyUA==}
+    engines: {node: ^14.18.0 || >=16.10.0}
 
   consola@3.4.2:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
@@ -3440,6 +3479,14 @@ packages:
 
   decimal.js@10.6.0:
     resolution: {integrity: sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==}
+
+  dedent@1.5.1:
+    resolution: {integrity: sha512-+LxW+KLWxu3HW3M2w2ympwtqPrqYRzU8fqi6Fhd18fBALe15blJPI/I4+UHveMVG6lJqB4JNd4UG0S5cnVHwIg==}
+    peerDependencies:
+      babel-plugin-macros: ^3.1.0
+    peerDependenciesMeta:
+      babel-plugin-macros:
+        optional: true
 
   dedent@1.7.2:
     resolution: {integrity: sha512-WzMx3mW98SN+zn3hgemf4OzdmyNhhhKz5Ay0pUfQiMQ3e1g+xmTJWp/pKdwKVXhdSkAEGIIzqeuWrL3mV/AXbA==}
@@ -4191,6 +4238,10 @@ packages:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
 
+  human-id@4.1.3:
+    resolution: {integrity: sha512-tsYlhAYpjCKa//8rXZ9DqKEawhPoSytweBC2eNvcaDK+57RZLHGqNs3PZTQO6yekLFSuvA6AlnAfrw1uBvtb+Q==}
+    hasBin: true
+
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
@@ -4497,6 +4548,9 @@ packages:
   js-image-generator@1.0.4:
     resolution: {integrity: sha512-ckb7kyVojGAnArouVR+5lBIuwU1fcrn7E/YYSd0FK7oIngAkMmRvHASLro9Zt5SQdWToaI66NybG+OGxPw/HlQ==}
 
+  js-sha256@0.11.1:
+    resolution: {integrity: sha512-o6WSo/LUvY2uC4j7mO50a2ms7E/EAdbP0swigLV+nzHKTTaYnaLIWJ02VdXrsJX0vGedDESQnLsOekr94ryfjg==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -4582,6 +4636,10 @@ packages:
 
   kuler@2.0.0:
     resolution: {integrity: sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==}
+
+  kysely@0.28.15:
+    resolution: {integrity: sha512-r2clcf7HLWvDXaVUEvQymXJY4i3bSOIV3xsL/Upy3ZfSv5HeKsk9tsqbBptLvth5qHEIhxeHTA2jNLyQABkLBA==}
+    engines: {node: '>=20.0.0'}
 
   lambda-local@2.2.0:
     resolution: {integrity: sha512-bPcgpIXbHnVGfI/omZIlgucDqlf4LrsunwoKue5JdZeGybt8L6KyJz2Zu19ffuZwIwLj2NAI2ZyaqNT6/cetcg==}
@@ -5615,6 +5673,11 @@ packages:
   spdx-license-ids@3.0.23:
     resolution: {integrity: sha512-CWLcCCH7VLu13TgOH+r8p1O/Znwhqv/dbb6lqWy67G+pT1kHmeD/+V36AVb/vq8QMIQwVShJ6Ssl5FPh0fuSdw==}
 
+  sqlite-wasm-kysely@0.3.0:
+    resolution: {integrity: sha512-TzjBNv7KwRw6E3pdKdlRyZiTmUIE0UttT/Sl56MVwVARl/u5gp978KepazCJZewFUnlWHz9i3NQd4kOtP/Afdg==}
+    peerDependencies:
+      kysely: '*'
+
   srvx@0.11.14:
     resolution: {integrity: sha512-mx+pKrWJCzo5m6uXqyB7n4VA81mpdFRroSWsVTQTYqCZE65hFJ+jtVIeyhtL2/kvtDMrHdbA0hWEUh/vu0+Viw==}
     engines: {node: '>=20.16.0'}
@@ -6078,6 +6141,10 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  uuid@10.0.0:
+    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    hasBin: true
 
   uuid@11.1.0:
     resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
@@ -7027,6 +7094,32 @@ snapshots:
 
   '@import-maps/resolve@2.0.0': {}
 
+  '@inlang/paraglide-js@2.15.1':
+    dependencies:
+      '@inlang/recommend-sherlock': 0.2.1
+      '@inlang/sdk': 2.9.1
+      commander: 11.1.0
+      consola: 3.4.0
+      json5: 2.2.3
+      unplugin: 2.3.11
+      urlpattern-polyfill: 10.1.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
+  '@inlang/recommend-sherlock@0.2.1':
+    dependencies:
+      comment-json: 4.6.2
+
+  '@inlang/sdk@2.9.1':
+    dependencies:
+      '@lix-js/sdk': 0.4.9
+      '@sinclair/typebox': 0.31.28
+      kysely: 0.28.15
+      sqlite-wasm-kysely: 0.3.0(kysely@0.28.15)
+      uuid: 13.0.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
   '@inquirer/ansi@1.0.2': {}
 
   '@inquirer/confirm@5.1.21(@types/node@22.19.15)':
@@ -7086,6 +7179,20 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@lix-js/sdk@0.4.9':
+    dependencies:
+      '@lix-js/server-protocol-schema': 0.1.1
+      dedent: 1.5.1
+      human-id: 4.1.3
+      js-sha256: 0.11.1
+      kysely: 0.28.15
+      sqlite-wasm-kysely: 0.3.0(kysely@0.28.15)
+      uuid: 10.0.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
+  '@lix-js/server-protocol-schema@0.1.1': {}
 
   '@mapbox/node-pre-gyp@2.0.3':
     dependencies:
@@ -8530,6 +8637,8 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
+  '@sinclair/typebox@0.31.28': {}
+
   '@sindresorhus/merge-streams@4.0.0': {}
 
   '@so-ric/colorspace@1.1.6':
@@ -8570,6 +8679,8 @@ snapshots:
   '@solid-primitives/utils@6.4.0(solid-js@1.9.12)':
     dependencies:
       solid-js: 1.9.12
+
+  '@sqlite.org/sqlite-wasm@3.48.0-build4': {}
 
   '@stylistic/eslint-plugin@5.10.0(eslint@10.1.0(jiti@2.6.1))':
     dependencies:
@@ -9449,6 +9560,8 @@ snapshots:
       call-bound: 1.0.4
       is-array-buffer: 3.0.5
 
+  array-timsort@1.0.3: {}
+
   array.prototype.flatmap@1.3.3:
     dependencies:
       call-bind: 1.0.8
@@ -9757,6 +9870,11 @@ snapshots:
 
   commander@2.20.3: {}
 
+  comment-json@4.6.2:
+    dependencies:
+      array-timsort: 1.0.3
+      esprima: 4.0.1
+
   comment-parser@1.4.6: {}
 
   common-path-prefix@3.0.0: {}
@@ -9770,6 +9888,8 @@ snapshots:
       readable-stream: 4.7.0
 
   confbox@0.1.8: {}
+
+  consola@3.4.0: {}
 
   consola@3.4.2: {}
 
@@ -9910,6 +10030,8 @@ snapshots:
       callsite: 1.0.0
 
   decimal.js@10.6.0: {}
+
+  dedent@1.5.1: {}
 
   dedent@1.7.2: {}
 
@@ -10823,6 +10945,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  human-id@4.1.3: {}
+
   human-signals@2.1.0: {}
 
   human-signals@5.0.0: {}
@@ -11107,6 +11231,8 @@ snapshots:
     dependencies:
       jpeg-js: 0.4.4
 
+  js-sha256@0.11.1: {}
+
   js-tokens@4.0.0: {}
 
   js-tokens@9.0.1: {}
@@ -11203,6 +11329,8 @@ snapshots:
   kleur@4.1.5: {}
 
   kuler@2.0.0: {}
+
+  kysely@0.28.15: {}
 
   lambda-local@2.2.0:
     dependencies:
@@ -12386,6 +12514,11 @@ snapshots:
 
   spdx-license-ids@3.0.23: {}
 
+  sqlite-wasm-kysely@0.3.0(kysely@0.28.15):
+    dependencies:
+      '@sqlite.org/sqlite-wasm': 3.48.0-build4
+      kysely: 0.28.15
+
   srvx@0.11.14: {}
 
   stable-hash-x@0.2.0: {}
@@ -12820,6 +12953,8 @@ snapshots:
       react: 19.2.4
 
   util-deprecate@1.0.2: {}
+
+  uuid@10.0.0: {}
 
   uuid@11.1.0: {}
 

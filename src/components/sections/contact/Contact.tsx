@@ -1,4 +1,6 @@
 import { portfolioData } from "#/data/portfolio";
+import { getSocialLabel } from "#/data/i18n-helpers";
+import * as m from "@/paraglide/messages.js";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, MapPin, Send } from "lucide-react";
@@ -15,26 +17,23 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto w-full max-w-270 px-4 py-20">
       <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-        05 // Contacto
+        {m.contact_kicker()}
       </p>
 
       <div className="grid gap-12 md:grid-cols-[1fr_auto_1fr] items-start">
         {/* Left — CTA */}
         <div>
           <h2 className="text-4xl font-bold tracking-tight text-foreground mb-4">
-            Construyamos
-            <br />
-            algo juntos.
+            {m.contact_heading()}
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-8 max-w-sm">
-            Si tienes un proyecto en mente o simplemente quieres conectar,
-            escríbeme. Siempre estoy abierto a nuevas oportunidades.
+            {m.contact_description()}
           </p>
 
           <Button asChild size="lg" className="gap-2">
             <a href={`mailto:${personal.email}`}>
               <Send className="h-4 w-4" />
-              Enviar email
+              {m.contact_send_email()}
             </a>
           </Button>
         </div>
@@ -54,7 +53,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                Email
+                {m.contact_email_label()}
               </p>
               <p className="text-sm font-semibold text-foreground">
                 {personal.email}
@@ -70,7 +69,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                  Ubicación
+                  {m.contact_location_label()}
                 </p>
                 <p className="text-sm font-semibold text-foreground">
                   {personal.location}
@@ -90,7 +89,7 @@ export default function Contact() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={link.label}
+                  aria-label={getSocialLabel(link.platform)}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
                 >
                   <Icon className="h-5 w-5" />

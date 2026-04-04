@@ -1,4 +1,6 @@
 import type { Certification } from "#/data/interfaces/data";
+import { getCertificationTitle } from "#/data/i18n-helpers";
+import * as m from "@/paraglide/messages.js";
 import {
   Card,
   CardContent,
@@ -32,7 +34,7 @@ export function CertificationCard({ certification: cert }: Props) {
             <Award className="h-5 w-5 text-primary" />
           </div>
         )}
-        <CardTitle className="font-bold">{cert.title}</CardTitle>
+        <CardTitle className="font-bold">{getCertificationTitle(cert.id)}</CardTitle>
         <CardDescription className="text-xs font-medium uppercase tracking-wider">
           {cert.issuer}
         </CardDescription>
@@ -42,7 +44,7 @@ export function CertificationCard({ certification: cert }: Props) {
         {cert.date && (
           <p className="text-xs text-muted-foreground mb-3">
             {cert.date}
-            {cert.expiresDate && ` · Expira ${cert.expiresDate}`}
+            {cert.expiresDate && ` · ${m.cert_expires({ date: cert.expiresDate })}`}
           </p>
         )}
 
@@ -53,7 +55,7 @@ export function CertificationCard({ certification: cert }: Props) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary transition-all hover:gap-2.5"
           >
-            Ver certificado
+            {m.cert_view()}
             <ArrowRight className="h-3 w-3" />
           </a>
         )}

@@ -4,7 +4,6 @@ import type { SkillName } from "./skills";
 export interface SocialLink {
   platform: string;
   url: string;
-  label: string;
 }
 
 export interface Skill {
@@ -13,13 +12,11 @@ export interface Skill {
 }
 
 export interface SkillHighlight {
-  title: string;
-  description: string;
+  id: string;
 }
 
 export interface Project {
-  title: string;
-  description: string;
+  id: string;
   image: string;
   tags: SkillName[];
   category: Category;
@@ -29,10 +26,6 @@ export interface Project {
 
 export interface PersonalInfo {
   name: string;
-  role: string;
-  headline: string;
-  subtitle: string;
-  bio: string[];
   profileImage: string;
   email: string;
   resumeUrl: string;
@@ -40,7 +33,7 @@ export interface PersonalInfo {
 }
 
 export interface Certification {
-  title: string;
+  id: string;
   issuer: string;
   image?: string;
   imageBg?: string;

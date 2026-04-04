@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { portfolioData } from "#/data/portfolio";
+import * as m from "@/paraglide/messages.js";
 
 const CAREER_START_YEAR = 2021;
 
@@ -14,20 +15,20 @@ export default function Hero() {
           {/* Left column */}
           <div>
             <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
-              01 // Introducción
+              {m.hero_kicker()}
             </p>
             <h1 className="mb-6 text-5xl font-extrabold tracking-tighter leading-[0.95] text-foreground md:text-7xl">
-              Hey, I'm{" "}
+              {m.hero_greeting({ name: "" })}
               <span className="text-primary">{personal.name.split(" ")[0]}</span>
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl">
-              {personal.subtitle}
+              {m.personal_subtitle()}
             </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Contáctame
+              {m.hero_cta()}
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -39,7 +40,7 @@ export default function Hero() {
                 {yearsExperience}+
               </p>
               <p className="mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground/30">
-                Years Expertise
+                {m.hero_years_label()}
               </p>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import { portfolioData } from '#/data/portfolio'
 import { PortfolioThemeSwitcher } from './ThemeSwitcher'
+import LanguageSwitcher from './LanguageSwitcher'
+import * as m from '@/paraglide/messages.js'
 
 export default function Header() {
   const { personal } = portfolioData
@@ -19,16 +21,16 @@ export default function Header() {
 
         <div className="order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
           <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
-            About
+            {m.nav_about()}
           </a>
           <a href="#projects" className="text-foreground/70 hover:text-foreground transition-colors">
-            Projects
+            {m.nav_projects()}
           </a>
           <a href="#certifications" className="text-foreground/70 hover:text-foreground transition-colors">
-            Certifications
+            {m.nav_certifications()}
           </a>
           <a href="#contact" className="text-foreground/70 hover:text-foreground transition-colors">
-            Contact
+            {m.nav_contact()}
           </a>
         </div>
 
@@ -39,9 +41,10 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground no-underline shadow-sm transition hover:-translate-y-0.5 sm:inline-flex"
           >
-            Download CV
+            {m.nav_download_cv()}
           </a>
         </div>
+        <LanguageSwitcher />
         <PortfolioThemeSwitcher />
       </nav>
     </header>

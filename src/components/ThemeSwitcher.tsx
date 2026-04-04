@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { Monitor, Moon, Sun } from 'lucide-react'
+import * as m from '@/paraglide/messages.js'
 
 type ThemeMode = 'light' | 'system' | 'dark'
 
@@ -56,7 +57,7 @@ function ThemeSwitcherRoot({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeContext value={{ mode, setTheme }}>
-      <div className="inline-flex items-center gap-0.5 rounded-full border border-border bg-secondary p-1 shadow-sm" role="radiogroup" aria-label="Tema">
+      <div className="inline-flex items-center gap-0.5 rounded-full border border-border bg-secondary p-1 shadow-sm" role="radiogroup" aria-label={m.theme_group_label()}>
         {children}
       </div>
     </ThemeContext>
@@ -89,9 +90,9 @@ export default ThemeSwitcher
 export function PortfolioThemeSwitcher() {
   return (
     <ThemeSwitcher>
-      <ThemeSwitcher.Option value="light" icon={<Sun className="h-3.5 w-3.5" />} label="Claro" />
-      <ThemeSwitcher.Option value="system" icon={<Monitor className="h-3.5 w-3.5" />} label="Automático" />
-      <ThemeSwitcher.Option value="dark" icon={<Moon className="h-3.5 w-3.5" />} label="Oscuro" />
+      <ThemeSwitcher.Option value="light" icon={<Sun className="h-3.5 w-3.5" />} label={m.theme_light()} />
+      <ThemeSwitcher.Option value="system" icon={<Monitor className="h-3.5 w-3.5" />} label={m.theme_auto()} />
+      <ThemeSwitcher.Option value="dark" icon={<Moon className="h-3.5 w-3.5" />} label={m.theme_dark()} />
     </ThemeSwitcher>
   )
 }

@@ -2,7 +2,8 @@ import { useState } from "react";
 import { portfolioData } from "#/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 import { ProjectCard } from "./ProjectCard";
-
+import * as m from "@/paraglide/messages.js";
+import { getCategoryLabel } from "#/data/i18n-helpers";
 
 export default function Projects() {
   const { projects, skills, projectCategories } = portfolioData;
@@ -31,10 +32,10 @@ export default function Projects() {
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between mb-12">
         <div className="shrink-0">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-            03 // Portfolio &amp; Stack
+            {m.projects_kicker()}
           </p>
           <h2 className="text-4xl font-bold tracking-tight text-foreground">
-            Proyectos
+            {m.projects_heading()}
           </h2>
         </div>
 
@@ -64,7 +65,7 @@ export default function Projects() {
                     : "border-border bg-transparent text-muted-foreground hover:border-primary/40 hover:text-foreground"
                   }`}
               >
-                {category}
+                {getCategoryLabel(category)}
               </button>
             ))}
           </div>
@@ -74,13 +75,13 @@ export default function Projects() {
       {/* Project grid */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
       {filtered.length === 0 && (
         <p className="mt-12 text-center text-sm text-muted-foreground">
-          No hay proyectos que coincidan con los filtros seleccionados.
+          {m.projects_empty()}
         </p>
       )}
     </section>

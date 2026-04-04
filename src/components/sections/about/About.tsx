@@ -1,25 +1,29 @@
 import { portfolioData } from "#/data/portfolio";
+import * as m from "@/paraglide/messages.js";
+import {
+  getSkillHighlightTitle,
+  getSkillHighlightDescription,
+} from "#/data/i18n-helpers";
 
 export default function About() {
   const { personal, skillHighlights } = portfolioData;
+  const bioParagraphs = [m.about_bio_1(), m.about_bio_2()];
 
   return (
     <section id="about" className="mx-auto w-full max-w-270 px-4 py-20">
       <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-        02 // Perfil
+        {m.about_kicker()}
       </p>
 
       <div className="grid gap-16 md:grid-cols-2 items-start">
         {/* Left column — Bio + Highlights */}
         <div>
           <h2 className="text-4xl font-bold tracking-tight text-foreground mb-8">
-            Código, arquitectura
-            <br />
-            &amp; producto.
+            {m.about_heading()}
           </h2>
 
           <div className="space-y-4 text-muted-foreground leading-relaxed mb-10">
-            {personal.bio.map((paragraph, i) => (
+            {bioParagraphs.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
@@ -32,12 +36,12 @@ export default function About() {
 
           <div className="grid gap-6 sm:grid-cols-3">
             {skillHighlights.map((highlight) => (
-              <div key={highlight.title}>
+              <div key={highlight.id}>
                 <h3 className="text-sm font-bold text-foreground mb-1">
-                  {highlight.title}
+                  {getSkillHighlightTitle(highlight.id)}
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  {highlight.description}
+                  {getSkillHighlightDescription(highlight.id)}
                 </p>
               </div>
             ))}
