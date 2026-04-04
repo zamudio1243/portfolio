@@ -1,18 +1,50 @@
+import { ArrowRight } from "lucide-react";
 import { portfolioData } from "#/data/portfolio";
 
+const CAREER_START_YEAR = 2021;
 
 export default function Hero() {
   const { personal } = portfolioData;
+  const yearsExperience = new Date().getFullYear() - CAREER_START_YEAR;
+
   return (
-    <section className="mx-auto w-full max-w-270 px-4 pt-20 pb-8">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-        01 // Introducción
-      </p>
-      <h1 className="text-6xl md:text-[5rem] font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-        Hey, I'm <span className="text-primary">{personal.name}</span>
-      </h1>
-      <p className="text-2xl md:text-3xl text-primary-foreground font-light max-w-2xl leading-relaxed">{personal.role}</p>
-      <p className="text-lg text-primary-foreground mb-6">{personal.headline}</p>
+    <section className="bg-card">
+      <div className="relative mx-auto w-full max-w-270 overflow-hidden px-4 pt-32 pb-24">
+        <div className="relative z-10 grid grid-cols-1 items-end gap-12 md:grid-cols-2">
+          {/* Left column */}
+          <div>
+            <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
+              01 // Introducción
+            </p>
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tighter leading-[0.95] text-foreground md:text-7xl">
+              Hey, I'm{" "}
+              <span className="text-primary">{personal.name.split(" ")[0]}</span>
+            </h1>
+            <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl">
+              {personal.subtitle}
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Contáctame
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Right column — decorative years badge */}
+          <div className="hidden select-none items-end justify-end md:flex">
+            <div className="text-right">
+              <p className="text-[10rem] font-extrabold leading-none tracking-tighter text-muted-foreground/20 lg:text-[14rem]">
+                {yearsExperience}+
+              </p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground/30">
+                Years Expertise
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
