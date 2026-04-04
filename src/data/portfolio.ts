@@ -72,7 +72,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Migración de un TMS crítico hacia una nueva arquitectura serverless en AWS, diseñada para gestionar la totalidad de las operaciones logísticas.",
       image: "/estrella_roja.jpg",
-      tags: ["NestJS", "Serverless", "AWS"],
+      tags: ["NestJS", "Serverless", "AWS", "GitHub Actions"],
       category: "Backend",
     },
     {
@@ -80,7 +80,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Sistema de gestión de flotas y líneas de crédito para gasolinera: reportes de cobro automatizados y suspensión por falta de pago.",
       image: "/permergas.jpg",
-      tags: ["NestJS", "TypeScript", "SQL Server"],
+      tags: ["NestJS", "TypeScript", "SQL Server", "GitHub Actions", "AWS"],
       category: "Backend",
     },
     {
