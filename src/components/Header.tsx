@@ -19,7 +19,7 @@ export default function Header() {
           </a>
         </h2>
 
-        <div className="order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
+        <div className="order-2 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-0 sm:w-auto sm:flex-nowrap sm:pb-0">
           <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
             {m.nav_about()}
           </a>
@@ -34,18 +34,18 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="ml-auto flex items-center gap-1.5 sm:ml-0 sm:gap-2">
+        <div className="flex items-center gap-1.5 sm:ml-auto sm:gap-2">
           <a
             href={personal.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground no-underline shadow-sm transition hover:-translate-y-0.5 sm:inline-flex"
+            className="rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground no-underline shadow-sm transition hover:-translate-y-0.5"
           >
             {m.nav_download_cv()}
           </a>
+          <LanguageSwitcher />
+          <PortfolioThemeSwitcher />
         </div>
-        <LanguageSwitcher />
-        <PortfolioThemeSwitcher />
       </nav>
     </header>
   )
