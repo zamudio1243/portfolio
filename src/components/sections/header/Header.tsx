@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { portfolioData } from '#/data/portfolio'
 import * as m from '@/paraglide/messages.js'
 import { getSocialLabel } from '#/data/i18n-helpers'
@@ -10,8 +11,38 @@ const socialIconMap: Record<string, React.ComponentType<{ className?: string }>>
   LinkedIn: LinkedInIcon,
 }
 
+function useScrollDirection() {
+  const [hidden, setHidden] = useState(false)
+
+  useEffect(() => {
+    let lastY = window.scrollY
+    let ticking = false
+
+    function onScroll() {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        const y = window.scrollY
+        if (y > 80 && y > lastY) {
+          setHidden(true)
+        } else {
+          setHidden(false)
+        }
+        lastY = y
+        ticking = false
+      })
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return hidden
+}
+
 export default function Header() {
   const { personal, socialLinks } = portfolioData
+  const scrollHidden = useScrollDirection()
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 px-4 backdrop-blur-lg">
@@ -44,7 +75,13 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="flex items-center gap-1.5 sm:ml-auto sm:gap-2">
+        <div
+          className={`flex items-center gap-1.5 transition-all duration-300 sm:ml-auto sm:gap-2 ${
+            scrollHidden
+              ? 'max-sm:max-h-0 max-sm:overflow-hidden max-sm:opacity-0'
+              : 'max-sm:max-h-12 max-sm:opacity-100'
+          }`}
+        >
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.platform]
             if (!Icon) return null

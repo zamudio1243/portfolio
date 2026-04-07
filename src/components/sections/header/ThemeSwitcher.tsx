@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Monitor, Moon, Sun } from 'lucide-react'
 import * as m from '@/paraglide/messages.js'
 
@@ -27,13 +27,16 @@ function applyThemeMode(mode: ThemeMode) {
   document.documentElement.style.colorScheme = resolved
 }
 
-const ThemeContext = createContext<{
-  mode: ThemeMode
-  setTheme: (mode: ThemeMode) => void
-}>({ mode: 'system', setTheme: () => {} })
+const themeOptions: { value: ThemeMode; icon: React.ReactNode; labelFn: () => string }[] = [
+  { value: 'light', icon: <Sun className="h-3.5 w-3.5" />, labelFn: () => m.theme_light() },
+  { value: 'system', icon: <Monitor className="h-3.5 w-3.5" />, labelFn: () => m.theme_auto() },
+  { value: 'dark', icon: <Moon className="h-3.5 w-3.5" />, labelFn: () => m.theme_dark() },
+]
 
-function ThemeSwitcherRoot({ children }: { children: React.ReactNode }) {
+export function PortfolioThemeSwitcher() {
   const [mode, setMode] = useState<ThemeMode>('system')
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const initial = getInitialMode()
@@ -49,50 +52,54 @@ function ThemeSwitcherRoot({ children }: { children: React.ReactNode }) {
     return () => media.removeEventListener('change', onChange)
   }, [mode])
 
+  useEffect(() => {
+    if (!open) return
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [open])
+
   function setTheme(next: ThemeMode) {
     setMode(next)
     applyThemeMode(next)
     window.localStorage.setItem('theme', next === 'system' ? 'auto' : next)
+    setOpen(false)
   }
 
-  return (
-    <ThemeContext value={{ mode, setTheme }}>
-      <div className="inline-flex items-center gap-0.5 rounded-full border border-border bg-secondary p-1 shadow-sm" role="radiogroup" aria-label={m.theme_group_label()}>
-        {children}
-      </div>
-    </ThemeContext>
-  )
-}
-
-function Option({ value, icon, label }: { value: ThemeMode; icon: React.ReactNode; label: string }) {
-  const { mode, setTheme } = useContext(ThemeContext)
-  const active = mode === value
+  const activeOption = themeOptions.find((o) => o.value === mode) ?? themeOptions[1]
 
   return (
-    <button
-      type="button"
-      role="radio"
-      aria-checked={active}
-      aria-label={label}
-      title={label}
-      onClick={() => setTheme(value)}
-      className={`rounded-full p-1.5 transition-colors ${active ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
-    >
-      {icon}
-    </button>
-  )
-}
-
-const ThemeSwitcher = Object.assign(ThemeSwitcherRoot, { Option })
-
-export default ThemeSwitcher
-
-export function PortfolioThemeSwitcher() {
-  return (
-    <ThemeSwitcher>
-      <ThemeSwitcher.Option value="light" icon={<Sun className="h-3.5 w-3.5" />} label={m.theme_light()} />
-      <ThemeSwitcher.Option value="system" icon={<Monitor className="h-3.5 w-3.5" />} label={m.theme_auto()} />
-      <ThemeSwitcher.Option value="dark" icon={<Moon className="h-3.5 w-3.5" />} label={m.theme_dark()} />
-    </ThemeSwitcher>
+    <div ref={ref} className="relative inline-flex items-center rounded-full border border-border bg-secondary shadow-sm">
+      {open ? (
+        <div className="inline-flex items-center gap-0.5 p-1" role="radiogroup" aria-label={m.theme_group_label()}>
+          {themeOptions.map((opt) => (
+            <button
+              key={opt.value}
+              type="button"
+              role="radio"
+              aria-checked={mode === opt.value}
+              aria-label={opt.labelFn()}
+              title={opt.labelFn()}
+              onClick={() => setTheme(opt.value)}
+              className={`rounded-full p-1.5 transition-colors ${mode === opt.value ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              {opt.icon}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <button
+          type="button"
+          aria-label={activeOption.labelFn()}
+          title={activeOption.labelFn()}
+          onClick={() => setOpen(true)}
+          className="rounded-full p-1.5 text-foreground transition-colors hover:text-foreground/80"
+        >
+          {activeOption.icon}
+        </button>
+      )}
+    </div>
   )
 }
