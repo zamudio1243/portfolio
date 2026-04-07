@@ -181,6 +181,7 @@
     @apply bg-background text-foreground;
   }
   section[id] {
+    @apply md:scroll-margin-top-0;
     scroll-margin-top: 5rem;
   }
 }
