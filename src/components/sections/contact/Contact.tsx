@@ -4,7 +4,7 @@ import * as m from "@/paraglide/messages.js";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, MapPin, Send } from "lucide-react";
-import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "#/components/sections/footer/icons";
 
 const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   GitHub: GitHubIcon,

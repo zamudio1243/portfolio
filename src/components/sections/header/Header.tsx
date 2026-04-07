@@ -1,7 +1,7 @@
 import { portfolioData } from '#/data/portfolio'
-import { PortfolioThemeSwitcher } from './ThemeSwitcher'
-import LanguageSwitcher from './LanguageSwitcher'
 import * as m from '@/paraglide/messages.js'
+import LanguageSwitcher from './LanguageSwitcher'
+import { PortfolioThemeSwitcher } from './ThemeSwitcher'
 
 export default function Header() {
   const { personal } = portfolioData
