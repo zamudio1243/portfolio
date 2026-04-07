@@ -1,4 +1,5 @@
 import About from '#/components/sections/about/About'
+import CaseStudies from '#/components/sections/case-studies/CaseStudies'
 import Certifications from '#/components/sections/certifications/Certifications'
 import Contact from '#/components/sections/contact/Contact'
 import Hero from '#/components/sections/hero/Hero'
@@ -12,6 +13,7 @@ function Home() {
     <main>
       <Hero />
       <About />
+      <CaseStudies />
       <Projects />
       <Certifications />
       <Contact />

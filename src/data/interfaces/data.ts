@@ -20,6 +20,7 @@ export interface Project {
   image: string;
   tags: SkillName[];
   category: Category;
+  featured?: boolean;
   liveUrl?: string;
   repoUrl?: string;
 }

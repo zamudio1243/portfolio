@@ -30,6 +30,9 @@ export default function Header() {
           <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
             {m.nav_about()}
           </a>
+          <a href="#case-studies" className="text-foreground/70 hover:text-foreground transition-colors">
+            {m.nav_case_studies()}
+          </a>
           <a href="#projects" className="text-foreground/70 hover:text-foreground transition-colors">
             {m.nav_projects()}
           </a>

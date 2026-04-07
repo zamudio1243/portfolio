@@ -2,6 +2,7 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
 
   "nav_about": "Acerca",
+  "nav_case_studies": "Casos de Estudio",
   "nav_projects": "Proyectos",
   "nav_certifications": "Certificaciones",
   "nav_contact": "Contacto",
@@ -28,7 +29,26 @@
   "skill_highlight_ai_title": "AI Integration",
   "skill_highlight_ai_description": "Implementé features con OpenAI API y LangChain para análisis de sentimiento, clustering y automatización de encuestas.",
 
-  "projects_kicker": "03 // Portfolio & Stack",
+  "case_study_kicker": "03 // Casos de Estudio",
+  "case_study_heading": "Casos de Estudio",
+  "case_study_challenge": "El Reto",
+  "case_study_role": "Mi Rol",
+  "case_study_results": "Resultados",
+  "case_study_confidential": "Algunos detalles se omiten por confidencialidad.",
+
+  "project_tms_challenge": "El cliente necesitaba migrar su sistema de gestión de transporte (TMS) a una arquitectura moderna sin perder funcionalidades existentes. El sistema legacy presentaba tiempos de consulta de rutas de hasta 3 minutos, afectando la operación logística diaria.",
+  "project_tms_role": "Backend Developer — Lideré la migración hacia una arquitectura serverless con AWS Lambda. Elegí serverless sobre contenedores para optimizar costos: las funciones solo se ejecutan bajo demanda, eliminando servidores permanentes. Diseñé el sistema de forma modular para facilitar mantenimiento y escalabilidad.",
+  "project_tms_results": "Tiempos de consulta de rutas reducidos de ~3 minutos a segundos. Costos operativos optimizados al eliminar infraestructura siempre activa. Sistema modular que permite agregar funcionalidades sin afectar las existentes.",
+
+  "project_proximity_challenge": "El cliente necesitaba controlar las entradas y salidas de vehículos en 6 parques industriales. El principal reto fue estandarizar dos proveedores de cámaras distintos (incluyendo Hikvision) para lograr trazabilidad unificada en todos los parques.",
+  "project_proximity_role": "Backend Developer — Diseñé y construí un sistema multitenant de control de accesos, integrando webhooks de dos proveedores de cámaras en un pipeline estandarizado para monitoreo en tiempo real de vehículos y paquetes.",
+  "project_proximity_results": "Monitoreo unificado en 6 parques industriales con trazabilidad en tiempo real, independiente del proveedor de cámaras. Sistema multitenant que escala a nuevos parques sin duplicar infraestructura.",
+
+  "project_rrhh_challenge": "La empresa había intentado herramientas como Trello y Airtable, pero ninguna se ajustaba a su flujo de trabajo real. Los procesos de RRHH para 90 empleados se gestionaban manualmente con hojas de cálculo.",
+  "project_rrhh_role": "Backend Developer — Diseñé la base de datos y seleccioné el stack tecnológico. Construí un sistema a la medida: gestión de tareas con balanceo de carga, vacaciones, registro de horas, incidencias que se convierten en actividades, avisos generales y reportes de Gross Margin para directivos.",
+  "project_rrhh_results": "Reemplazó procesos manuales en Excel y herramientas dispersas con un sistema unificado para 90 empleados. PMs con visibilidad completa sobre carga de trabajo del equipo y costos por proyecto.",
+
+  "projects_kicker": "04 // Portfolio & Stack",
   "projects_heading": "Proyectos",
   "projects_empty": "No hay proyectos que coincidan con los filtros seleccionados.",
   "category_all": "Todos",
@@ -57,7 +77,7 @@
   "project_gmar_title": "Apps Ride-Sharing — GMAR",
   "project_gmar_description": "Dos apps móviles de ride-sharing desarrolladas desde cero: una nativa para Android con Jetpack Compose y otra multiplataforma con Flutter, ambas conectadas vía GraphQL.",
 
-  "cert_kicker": "04 // Credenciales",
+  "cert_kicker": "05 // Credenciales",
   "cert_heading": "Certificaciones",
   "cert_view": "Ver certificado",
   "cert_expires": "Expira {date}",
@@ -65,7 +85,7 @@
   "cert_claude_title": "Claude Code in Action",
   "cert_nextjs_title": "Next.js App Router Fundamentals",
 
-  "contact_kicker": "05 // Contacto",
+  "contact_kicker": "06 // Contacto",
   "contact_heading": "Disponible para nuevas oportunidades.",
   "contact_description": "Busco un equipo donde pueda aportar con arquitectura serverless, backend robusto y entrega end-to-end. Si tienes un proyecto o una posición abierta, hablemos.",
   "contact_send_email": "Enviar email",

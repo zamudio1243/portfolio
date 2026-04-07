@@ -50,6 +50,7 @@ export const portfolioData: PortfolioData = {
       image: "/estrella_roja.jpg",
       tags: ["NestJS", "Serverless", "AWS", "GitHub Actions"],
       category: "Backend",
+      featured: true,
     },
     {
       id: "permergas",
@@ -68,6 +69,7 @@ export const portfolioData: PortfolioData = {
       image: "/proximity.jpg",
       tags: ["Nx.dev", "TypeScript", "AWS"],
       category: "Backend",
+      featured: true,
     },
     {
       id: "excelencia",
@@ -86,6 +88,7 @@ export const portfolioData: PortfolioData = {
       image: "/bambu.jpg",
       tags: ["Nx.dev", "AWS", "OpenAI"],
       category: "Backend",
+      featured: true,
     },
     {
       id: "codisa",

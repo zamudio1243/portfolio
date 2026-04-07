@@ -2,6 +2,7 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
 
   "nav_about": "About",
+  "nav_case_studies": "Case Studies",
   "nav_projects": "Projects",
   "nav_certifications": "Certifications",
   "nav_contact": "Contact",
@@ -28,7 +29,26 @@
   "skill_highlight_ai_title": "AI Integration",
   "skill_highlight_ai_description": "Implemented features with OpenAI API and LangChain for sentiment analysis, clustering, and survey automation.",
 
-  "projects_kicker": "03 // Portfolio & Stack",
+  "case_study_kicker": "03 // Case Studies",
+  "case_study_heading": "Case Studies",
+  "case_study_challenge": "The Challenge",
+  "case_study_role": "My Role",
+  "case_study_results": "Results",
+  "case_study_confidential": "Some details are omitted for confidentiality.",
+
+  "project_tms_challenge": "The client needed to migrate their Transport Management System (TMS) to a modern architecture without losing existing functionality. The legacy system had route query times of up to 3 minutes, impacting daily logistics operations.",
+  "project_tms_role": "Backend Developer — I led the migration to a serverless architecture with AWS Lambda. I chose serverless over containers to optimize costs: functions only run on demand, eliminating always-on servers. I designed the system in a modular way for easier maintenance and scalability.",
+  "project_tms_results": "Route query times reduced from ~3 minutes to seconds. Operational costs optimized by eliminating always-on infrastructure. Modular system that allows adding features without affecting existing ones.",
+
+  "project_proximity_challenge": "The client needed to control vehicle entries and exits across 6 industrial parks. The main challenge was standardizing two different camera vendors (including Hikvision) to achieve unified traceability across all parks.",
+  "project_proximity_role": "Backend Developer — I designed and built a multitenant access control system, integrating webhooks from two camera providers into a standardized pipeline for real-time vehicle and package monitoring.",
+  "project_proximity_results": "Unified monitoring across 6 industrial parks with real-time traceability, regardless of camera vendor. Multitenant system that scales to new parks without duplicating infrastructure.",
+
+  "project_rrhh_challenge": "The company had tried tools like Trello and Airtable, but none fit their actual workflow. HR processes for 90 employees were managed manually with spreadsheets.",
+  "project_rrhh_role": "Backend Developer — I designed the database and selected the tech stack. Built a custom system: task management with workload balancing, vacation tracking, time logging, incidents that convert to tasks, company-wide announcements, and Gross Margin reports for executives.",
+  "project_rrhh_results": "Replaced manual Excel processes and scattered tools with a unified system for 90 employees. PMs now have full visibility over team workload and project costs.",
+
+  "projects_kicker": "04 // Portfolio & Stack",
   "projects_heading": "Projects",
   "projects_empty": "No projects match the selected filters.",
   "category_all": "All",
@@ -57,7 +77,7 @@
   "project_gmar_title": "Ride-Sharing Apps — GMAR",
   "project_gmar_description": "Two ride-sharing mobile apps built from scratch: a native Android app with Jetpack Compose and a cross-platform app with Flutter, both connected via GraphQL.",
 
-  "cert_kicker": "04 // Credentials",
+  "cert_kicker": "05 // Credentials",
   "cert_heading": "Certifications",
   "cert_view": "View credential",
   "cert_expires": "Expires {date}",
@@ -65,7 +85,7 @@
   "cert_claude_title": "Claude Code in Action",
   "cert_nextjs_title": "Next.js App Router Fundamentals",
 
-  "contact_kicker": "05 // Contact",
+  "contact_kicker": "06 // Contact",
   "contact_heading": "Open for new opportunities.",
   "contact_description": "I'm looking for a team where I can contribute with serverless architecture, robust backends, and end-to-end delivery. If you have a project or an open position, let's talk.",
   "contact_send_email": "Send email",

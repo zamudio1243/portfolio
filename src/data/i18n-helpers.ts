@@ -58,6 +58,38 @@ export function getProjectDescription(id: string): string {
   return projectDescriptions[id]?.() ?? "";
 }
 
+// --- Case Studies ---
+
+const projectChallenges: Record<string, () => string> = {
+  tms: m.project_tms_challenge,
+  proximity: m.project_proximity_challenge,
+  rrhh: m.project_rrhh_challenge,
+};
+
+const projectRoles: Record<string, () => string> = {
+  tms: m.project_tms_role,
+  proximity: m.project_proximity_role,
+  rrhh: m.project_rrhh_role,
+};
+
+const projectResults: Record<string, () => string> = {
+  tms: m.project_tms_results,
+  proximity: m.project_proximity_results,
+  rrhh: m.project_rrhh_results,
+};
+
+export function getProjectChallenge(id: string): string {
+  return projectChallenges[id]?.() ?? "";
+}
+
+export function getProjectRole(id: string): string {
+  return projectRoles[id]?.() ?? "";
+}
+
+export function getProjectResults(id: string): string {
+  return projectResults[id]?.() ?? "";
+}
+
 // --- Certifications ---
 
 const certificationTitles: Record<string, () => string> = {
