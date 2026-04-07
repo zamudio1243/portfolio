@@ -9,7 +9,8 @@
 
   "hero_kicker": "01 // Introducción",
   "hero_greeting": "Hola, soy {name}",
-  "hero_cta": "Contáctame",
+  "hero_cta": "Hablemos",
+  "hero_availability": "Disponible para nuevas oportunidades",
   "hero_years_label": "Años de experiencia",
 
   "personal_role": "Fullstack Developer",
@@ -65,8 +66,8 @@
   "cert_nextjs_title": "Next.js App Router Fundamentals",
 
   "contact_kicker": "05 // Contacto",
-  "contact_heading": "Construyamos algo juntos.",
-  "contact_description": "Si tienes un proyecto en mente o simplemente quieres conectar, escríbeme. Siempre estoy abierto a nuevas oportunidades.",
+  "contact_heading": "Disponible para nuevas oportunidades.",
+  "contact_description": "Busco un equipo donde pueda aportar con arquitectura serverless, backend robusto y entrega end-to-end. Si tienes un proyecto o una posición abierta, hablemos.",
   "contact_send_email": "Enviar email",
   "contact_email_label": "Email",
   "contact_location_label": "Ubicación",

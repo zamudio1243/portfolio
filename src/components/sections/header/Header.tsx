@@ -1,10 +1,17 @@
 import { portfolioData } from '#/data/portfolio'
 import * as m from '@/paraglide/messages.js'
+import { getSocialLabel } from '#/data/i18n-helpers'
+import { GitHubIcon, LinkedInIcon } from '#/components/sections/footer/icons'
 import LanguageSwitcher from './LanguageSwitcher'
 import { PortfolioThemeSwitcher } from './ThemeSwitcher'
 
+const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  GitHub: GitHubIcon,
+  LinkedIn: LinkedInIcon,
+}
+
 export default function Header() {
-  const { personal } = portfolioData
+  const { personal, socialLinks } = portfolioData
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 px-4 backdrop-blur-lg">
@@ -35,6 +42,22 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-1.5 sm:ml-auto sm:gap-2">
+          {socialLinks.map((link) => {
+            const Icon = socialIconMap[link.platform]
+            if (!Icon) return null
+            return (
+              <a
+                key={link.platform}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={getSocialLabel(link.platform)}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-secondary text-foreground/70 no-underline shadow-sm transition hover:-translate-y-0.5 hover:text-foreground"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            )
+          })}
           <a
             href={personal.resumeUrl}
             target="_blank"

@@ -10,23 +10,20 @@ cv:
 
   sections:
     perfil:
-      - "Desarrollador Fullstack con experiencia construyendo productos de principio a fin: desde APIs robustas y arquitecturas serverless en AWS hasta interfaces modernas con React y Next.js. Con trayectoria en proyectos para logística, RRHH, inmobiliaria, e-commerce y movilidad, aporto visión técnica integral para entregar soluciones escalables y de alto impacto."
+      - "Desarrollador Fullstack con +5 años de experiencia y 8 proyectos en producción en logística, RRHH, inmobiliaria, e-commerce y movilidad. Me especializo en seleccionar patrones de diseño pensados para el largo plazo, creando código reutilizable que se adopta como estándar en el equipo. Stack principal: Node.js, NestJS, React/Next.js y AWS."
 
     experiencia_profesional:
-      - company: "Bambú Tech Services (antes Bambú Mobile)"
+      - company: Bambú Tech Services
         position: Backend Developer
         start_date: 2023-09
         end_date: present
         highlights:
-          - "Inicié el proceso de migración de un TMS (Transportation Management System) crítico de **Grupo Estrella Roja** hacia una nueva arquitectura serverless, diseñada para gestionar la totalidad de sus operaciones logísticas."
-          - "Desarrollé el backend integral para un sistema interno de RRHH, automatizando la gestión de tareas, solicitudes de vacaciones, control de altas y bajas, y la generación de reportes de costos de proyectos."
-          - "Implementé un sistema de encuestas de satisfacción para clientes y empleados, analizados y clusterizados con AI."
-          - "Diseñé y construí el backend para un sistema de control de accesos en parques industriales, integrando webhooks con cámaras Hikvision para el monitoreo en tiempo real de vehículos y paquetes de **Proximity Parks**."
-          - "Lideré la migración de una base de datos productiva de un entorno dockerizado en EC2 hacia Amazon RDS, mejorando la escalabilidad, seguridad y eficiencia operativa para **Grupo Excelencia**."
-          - "Creé el backend para una aplicación móvil de lealtad (**App Rendilitros**), gestionando el alta de usuarios y procesando transacciones para la acumulación de puntos."
-          - "Desarrollé y mantuve el backend para el CMS y blog de la inmobiliaria **Javer**, apoyando además en el frontend con Next.js en la implementación de componentes y diseño de vistas."
-          - "Implementé un sistema backend para la gestión de flotas y líneas de crédito en la gasolinera **Permergas**, generando reportes de cobro y automatizando la suspensión de servicio por falta de pago."
-          - "Implementé prácticas de CI/CD con GitHub Actions para mejorar la eficiencia en la entrega de software, reduciendo errores y tiempos de entrega."
+          - "Lideré la migración del TMS de **Grupo Estrella Roja** hacia una arquitectura serverless, reduciendo tiempos de consulta de rutas de ~3 minutos a segundos."
+          - "Diseñé y entregué el backend de un sistema RRHH para 90 empleados, reemplazando procesos manuales en Excel y automatizando vacaciones, altas/bajas, asignación de tareas y reportes de costos, mejorando la visibilidad de PMs sobre esfuerzos del equipo."
+          - "Construí un sistema multitenant de control de accesos para 6 parques industriales de **Proximity Parks**, integrando webhooks de cámaras Hikvision y un segundo proveedor para monitoreo en tiempo real de vehículos y paquetes."
+          - "Migré base de datos productiva (PostgreSQL) de EC2/Docker a Amazon RDS para **Grupo Excelencia**, reduciendo costos operativos y latencia de queries, y mejorando la seguridad dentro del ecosistema AWS."
+          - "Establecí pipelines CI/CD con GitHub Actions en 4 proyectos e implementé tests unitarios desde cero, reduciendo el deploy de ~30 min manuales a un merge automático y previniendo regresiones en producción."
+          - "Capacité a 3 desarrolladores de nuevo ingreso, supervisando su desarrollo técnico y acelerando su integración en proyectos activos."
           - "Tech stack: AWS, NestJS, Express, Serverless, OpenAI, LangChain"
 
       - company: Overclock Studios SA de CV
@@ -34,8 +31,8 @@ cv:
         start_date: 2022-02
         end_date: 2023-09
         highlights:
-          - "Desarrollé un sistema de facturación y control de inventario completo utilizando Node.js, TypeScript y GraphQL, automatizando un proceso manual y reduciendo notablemente los tiempos de sincronización."
-          - "Construí el backend y el frontend (Vue.js + Nuxt.js) para el e-commerce de ropa de **Codisa**, y lideré la migración de la pasarela de pagos de Stripe a OpenPay (BBVA), tanto en back como en front."
+          - "Desarrollé un sistema de facturación e inventario con Node.js, TypeScript y GraphQL que sincronizó el stock en tiempo real de ~300 productos, eliminando pérdidas de ventas por desactualización entre sistema y tienda física."
+          - "Construí backend y frontend (Vue.js + Nuxt.js) del e-commerce de **Codisa** y lideré la actualización de la pasarela de pagos de Stripe a OpenPay (BBVA)."
           - "Tech stack: Strapi CMS, Vue.js, Nuxt.js, Stripe, OpenPay, Digital Ocean."
 
       - company: UGUSOFT S de RL
@@ -43,9 +40,8 @@ cv:
         start_date: 2021-02
         end_date: 2022-02
         highlights:
-          - "Desarrollé dos aplicaciones móviles de ride-sharing desde cero: una nativa para Android con Jetpack Compose y otra multiplataforma con Flutter."
-          - "Implementé la comunicación con el backend a través de APIs GraphQL para garantizar un intercambio de datos eficiente."
-          - "Capacité y mentoricé a becarios de nuevo ingreso, supervisando su desarrollo técnico y asignando tareas para acelerar su integración en los proyectos."
+          - "Desarrollé dos aplicaciones móviles de ride-sharing llevadas a producción: una nativa para Android con Jetpack Compose y otra multiplataforma con Flutter, comunicándose con el backend vía APIs GraphQL."
+          - "Mentoreé a 4 becarios de nuevo ingreso, supervisando su desarrollo técnico y acelerando su integración en proyectos."
           - "Tech stack: Flutter, Jetpack Compose"
 
     educación:
@@ -58,32 +54,20 @@ cv:
     certificaciones:
       - name: AWS Cloud Practitioner
         date: "Noviembre 2024"
-      - name: "Claude Code in Action"
-        date: "2026-03-27"
-      - name: "Next.js App Router Fundamentals"
-        date: "2026-03-23"
 
     skills:
-      - label: Lenguajes
-        details: "TypeScript, Kotlin, Python, Dart"
-      - label: Backend
-        details: "Node.js, NestJS, Express, GraphQL, Serverless Framework"
-      - label: Frontend
-        details: "React, Next.js, Vue.js, Nuxt.js, Tailwind CSS, TanStack Query, TanStack Start"
-      - label: Cloud
-        details: "AWS (certificado): EC2, S3, Lambda, SNS, SQS, EventBridge, API Gateway, Cognito · Google Cloud · Digital Ocean · Docker"
-      - label: Mobile
-        details: "Flutter, Jetpack Compose"
-      - label: Bases de Datos
-        details: "PostgreSQL, MySQL, SQL Server"
-      - label: Testing y DevOps
-        details: "Jest, JUnit, GitHub Actions, CI/CD"
-      - label: AI Tools
-        details: "Claude Code, OpenCode, OpenAI API, LangChain"
+      - label: Stack Principal
+        details: "TypeScript, Node.js, NestJS, Express, React, Next.js, Tailwind CSS, PostgreSQL, GraphQL, Serverless Framework"
+      - label: AWS (Certificado)
+        details: "Lambda, EC2, S3, SNS, SQS, EventBridge, API Gateway, Cognito"
+      - label: Testing & DevOps
+        details: "Jest, JUnit, GitHub Actions, CI/CD, Docker"
+      - label: También en producción
+        details: "Vue.js, Nuxt.js, Flutter, Jetpack Compose, Kotlin, Python, Dart, MySQL, Google Cloud, Digital Ocean"
+      - label: AI
+        details: "Claude Code, OpenAI API, LangChain"
       - label: Idiomas
-        details: "Español (Nativo), Inglés (487 TOEFL ITP)"
-      - label: Metodologías
-        details: "Desarrollo Ágil, Git"
+        details: "Español (Nativo), Inglés (Intermedio-Avanzado)"
 
 design:
   theme: harvard
