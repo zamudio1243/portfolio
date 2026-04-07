@@ -24,8 +24,10 @@ function useScrollDirection() {
       requestAnimationFrame(() => {
         const y = window.scrollY
         const delta = y - lastY
+        const atBottom =
+          window.innerHeight + y >= document.documentElement.scrollHeight - 2
         if (Math.abs(delta) > 5) {
-          setHidden(y > 80 && delta > 0)
+          setHidden(y > 80 && delta > 0 && !atBottom)
           lastY = y
         }
         ticking = false
