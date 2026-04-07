@@ -23,12 +23,11 @@ function useScrollDirection() {
       ticking = true
       requestAnimationFrame(() => {
         const y = window.scrollY
-        if (y > 80 && y > lastY) {
-          setHidden(true)
-        } else {
-          setHidden(false)
+        const delta = y - lastY
+        if (Math.abs(delta) > 5) {
+          setHidden(y > 80 && delta > 0)
+          lastY = y
         }
-        lastY = y
         ticking = false
       })
     }
