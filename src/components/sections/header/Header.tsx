@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { GitHubIcon, LinkedInIcon } from '#/components/sections/footer/icons'
+import { getSocialLabel } from '#/data/i18n-helpers'
 import { portfolioData } from '#/data/portfolio'
 import * as m from '@/paraglide/messages.js'
-import { getSocialLabel } from '#/data/i18n-helpers'
-import { GitHubIcon, LinkedInIcon } from '#/components/sections/footer/icons'
+import { Menu, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 import { PortfolioThemeSwitcher } from './ThemeSwitcher'
 
@@ -66,9 +66,8 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg transition-transform duration-300 ${
-        scrollHidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'
-      }`}
+      className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg transition-transform duration-300 ${scrollHidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'
+        }`}
     >
       <nav className="mx-auto flex w-full max-w-270 items-center gap-4 px-4 py-3 sm:py-4">
         {/* Logo */}
@@ -76,7 +75,7 @@ export default function Header() {
           href="#"
           className="shrink-0 text-lg font-bold tracking-tight text-foreground no-underline"
         >
-          H.
+        Héctor
         </a>
 
         {/* Desktop nav links — centered */}
@@ -116,7 +115,7 @@ export default function Header() {
             href={personal.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground no-underline shadow-sm transition hover:-translate-y-0.5"
+            className="rounded-full border border-border bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground no-underline shadow-sm transition hover:-translate-y-0.5"
           >
             CV
           </a>
@@ -161,9 +160,8 @@ export default function Header() {
 
       {/* Mobile slide-down menu */}
       <div
-        className={`overflow-hidden border-t border-border transition-all duration-300 md:hidden ${
-          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 border-t-0 opacity-0'
-        }`}
+        className={`overflow-hidden border-t border-border transition-all duration-300 md:hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 border-t-0 opacity-0'
+          }`}
       >
         <div className="mx-auto max-w-270 px-4 pb-4">
           <div className="flex flex-col gap-3 py-3 text-sm font-semibold">
