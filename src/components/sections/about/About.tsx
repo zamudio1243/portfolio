@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <section id="about" className="mx-auto w-full max-w-270 px-4 py-20">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-6">
         {m.about_kicker()}
       </p>
 

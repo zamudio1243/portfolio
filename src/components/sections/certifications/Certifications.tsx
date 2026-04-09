@@ -7,8 +7,9 @@ export default function Certifications() {
   if (certifications.length === 0) return null;
 
   return (
-    <section id="certifications" className="mx-auto w-full max-w-270 px-4 py-20">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+    <section id="certifications" className="bg-muted">
+      <div className="mx-auto w-full max-w-270 px-4 py-20">
+      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-6">
         {m.cert_kicker()}
       </p>
       <h2 className="text-4xl font-bold tracking-tight text-foreground mb-12">
@@ -19,6 +20,7 @@ export default function Certifications() {
         {certifications.map((cert) => (
           <CertificationCard key={cert.id} certification={cert} />
         ))}
+      </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { GitHubIcon, LinkedInIcon } from '#/components/sections/footer/icons'
 import { getSocialLabel } from '#/data/i18n-helpers'
 import { portfolioData } from '#/data/portfolio'
+import { Button } from '@/components/ui/button'
 import * as m from '@/paraglide/messages.js'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -99,26 +100,33 @@ export default function Header() {
             const Icon = socialIconMap[link.platform]
             if (!Icon) return null
             return (
-              <a
+              <Button
                 key={link.platform}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={getSocialLabel(link.platform)}
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-secondary text-foreground/70 no-underline shadow-sm transition hover:-translate-y-0.5 hover:text-foreground"
+                variant="outline"
+                size="icon-sm"
+                className="rounded-full"
+                asChild
               >
-                <Icon className="h-4 w-4" />
-              </a>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={getSocialLabel(link.platform)}
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              </Button>
             )
           })}
-          <a
-            href={personal.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-border bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground no-underline shadow-sm transition hover:-translate-y-0.5"
-          >
-            CV
-          </a>
+          <Button size="sm" className="rounded-full" asChild>
+            <a
+              href={personal.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
+          </Button>
         </div>
 
         {/* Mobile right side — always visible */}
@@ -127,34 +135,42 @@ export default function Header() {
             const Icon = socialIconMap[link.platform]
             if (!Icon) return null
             return (
-              <a
+              <Button
                 key={link.platform}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={getSocialLabel(link.platform)}
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-secondary text-foreground/70 no-underline shadow-sm transition hover:text-foreground"
+                variant="outline"
+                size="icon-sm"
+                className="rounded-full"
+                asChild
               >
-                <Icon className="h-4 w-4" />
-              </a>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={getSocialLabel(link.platform)}
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              </Button>
             )
           })}
-          <a
-            href={personal.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground no-underline shadow-sm"
-          >
-            CV
-          </a>
-          <button
-            type="button"
+          <Button variant="secondary" size="sm" className="rounded-full" asChild>
+            <a
+              href={personal.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon-sm"
+            className="rounded-full"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-secondary text-foreground/70 transition hover:text-foreground"
           >
             {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
+          </Button>
         </div>
       </nav>
 

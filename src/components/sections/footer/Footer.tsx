@@ -1,4 +1,5 @@
 import { portfolioData } from '#/data/portfolio';
+import { Separator } from '@/components/ui/separator';
 import * as m from '@/paraglide/messages.js';
 
 export default function Footer() {
@@ -6,7 +7,8 @@ export default function Footer() {
   const { personal } = portfolioData
 
   return (
-    <footer className="px-4 pb-14 pt-10 text-muted-foreground">
+    <footer className="px-4 pb-14 pt-0 text-muted-foreground">
+      <Separator className="mx-auto mb-10 w-full max-w-270" />
       <div className="mx-auto w-full max-w-270 flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <p className="m-0 text-sm">
           {m.footer_copyright({ year: String(year), name: personal.name })}

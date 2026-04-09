@@ -1,6 +1,12 @@
 import { portfolioData } from "#/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
   getProjectTitle,
   getProjectDescription,
   getProjectChallenge,
@@ -22,14 +28,16 @@ function CaseStudyCard({
     accent === "primary" ? "border-l-primary" : "border-l-muted-foreground/40";
 
   return (
-    <div
-      className={`rounded-lg border border-border bg-card p-5 border-l-4 ${borderClass}`}
-    >
-      <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">
-        {label}
-      </p>
-      <p className="text-sm leading-relaxed text-muted-foreground">{text}</p>
-    </div>
+    <Card className={`border-l-4 ${borderClass}`}>
+      <CardHeader>
+        <CardTitle className="text-xs font-bold uppercase tracking-widest text-primary">
+          {label}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-sm leading-relaxed text-muted-foreground">{text}</p>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -37,8 +45,9 @@ export default function CaseStudies() {
   const featured = portfolioData.projects.filter((p) => p.featured);
 
   return (
-    <section id="case-studies" className="mx-auto w-full max-w-270 px-4 py-20">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+    <section id="case-studies" className="bg-muted">
+      <div className="mx-auto w-full max-w-270 px-4 py-20">
+      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-6">
         {m.case_study_kicker()}
       </p>
       <h2 className="text-4xl font-bold tracking-tight text-foreground mb-16">
@@ -121,6 +130,7 @@ export default function CaseStudies() {
       <p className="mt-12 text-center text-xs text-muted-foreground/60">
         {m.case_study_confidential()}
       </p>
+      </div>
     </section>
   );
 }

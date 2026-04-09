@@ -16,7 +16,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="mx-auto w-full max-w-270 px-4 py-20">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-6">
         {m.contact_kicker()}
       </p>
 
@@ -84,16 +84,21 @@ export default function Contact() {
               const Icon = socialIconMap[link.platform];
               if (!Icon) return null;
               return (
-                <a
+                <Button
                   key={link.platform}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={getSocialLabel(link.platform)}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                  variant="outline"
+                  size="icon-lg"
+                  asChild
                 >
-                  <Icon className="h-5 w-5" />
-                </a>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={getSocialLabel(link.platform)}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                </Button>
               );
             })}
           </div>
