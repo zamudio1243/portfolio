@@ -2,6 +2,7 @@ import { GitHubIcon, LinkedInIcon } from '#/components/sections/footer/icons'
 import { getSocialLabel } from '#/data/i18n-helpers'
 import { portfolioData } from '#/data/portfolio'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import * as m from '@/paraglide/messages.js'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -67,16 +68,18 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg transition-transform duration-300 ${scrollHidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'
-        }`}
+      className={cn(
+        'sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg transition-transform duration-300',
+        scrollHidden && !menuOpen ? '-translate-y-full' : 'translate-y-0',
+      )}
     >
-      <nav className="mx-auto flex w-full max-w-270 items-center gap-4 px-4 py-3 sm:py-4">
+      <nav className="mx-auto flex w-full max-w-270 items-center justify-between gap-4 px-4 py-3 sm:py-4">
         {/* Logo */}
         <a
           href="#"
           className="shrink-0 text-lg font-bold tracking-tight text-foreground no-underline"
         >
-        Héctor
+          Héctor
         </a>
 
         {/* Desktop nav links — centered */}
@@ -118,7 +121,11 @@ export default function Header() {
               </Button>
             )
           })}
-          <Button size="sm" className="rounded-full" asChild>
+          <Button
+            size="sm"
+            className="rounded-full shadow-md shadow-primary/20"
+            asChild
+          >
             <a
               href={personal.resumeUrl}
               target="_blank"
@@ -130,7 +137,7 @@ export default function Header() {
         </div>
 
         {/* Mobile right side — always visible */}
-        <div className="ml-auto flex items-center gap-1.5 md:hidden">
+        <div className="flex items-center gap-1.5 md:hidden">
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.platform]
             if (!Icon) return null
@@ -153,7 +160,11 @@ export default function Header() {
               </Button>
             )
           })}
-          <Button variant="secondary" size="sm" className="rounded-full" asChild>
+          <Button
+            size="sm"
+            className="rounded-full shadow-md shadow-primary/20"
+            asChild
+          >
             <a
               href={personal.resumeUrl}
               target="_blank"
@@ -176,17 +187,19 @@ export default function Header() {
 
       {/* Mobile slide-down menu */}
       <div
-        className={`overflow-hidden border-t border-border transition-all duration-300 md:hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 border-t-0 opacity-0'
-          }`}
+        className={cn(
+          'overflow-hidden border-t border-border transition-all duration-300 md:hidden',
+          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 border-t-0 opacity-0',
+        )}
       >
         <div className="mx-auto max-w-270 px-4 pb-4">
-          <div className="flex flex-col gap-3 py-3 text-sm font-semibold">
+          <div className="flex flex-col gap-1 py-3 text-sm font-semibold">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-foreground/70 transition-colors hover:text-foreground"
+                className="rounded-lg px-3 py-2.5 text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {link.label()}
               </a>

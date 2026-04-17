@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Monitor, Moon, Sun } from 'lucide-react'
 import * as m from '@/paraglide/messages.js'
 
@@ -27,16 +27,20 @@ function applyThemeMode(mode: ThemeMode) {
   document.documentElement.style.colorScheme = resolved
 }
 
-const themeOptions: { value: ThemeMode; icon: React.ReactNode; labelFn: () => string }[] = [
-  { value: 'light', icon: <Sun className="h-3.5 w-3.5" />, labelFn: () => m.theme_light() },
-  { value: 'system', icon: <Monitor className="h-3.5 w-3.5" />, labelFn: () => m.theme_auto() },
-  { value: 'dark', icon: <Moon className="h-3.5 w-3.5" />, labelFn: () => m.theme_dark() },
-]
+const themeCycle: Record<ThemeMode, ThemeMode> = {
+  light: 'system',
+  system: 'dark',
+  dark: 'light',
+}
+
+const themeMeta: Record<ThemeMode, { icon: React.ReactNode; labelFn: () => string }> = {
+  light: { icon: <Sun className="h-3.5 w-3.5" />, labelFn: () => m.theme_light() },
+  system: { icon: <Monitor className="h-3.5 w-3.5" />, labelFn: () => m.theme_auto() },
+  dark: { icon: <Moon className="h-3.5 w-3.5" />, labelFn: () => m.theme_dark() },
+}
 
 export function PortfolioThemeSwitcher() {
   const [mode, setMode] = useState<ThemeMode>('system')
-  const [open, setOpen] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const initial = getInitialMode()
@@ -52,54 +56,24 @@ export function PortfolioThemeSwitcher() {
     return () => media.removeEventListener('change', onChange)
   }, [mode])
 
-  useEffect(() => {
-    if (!open) return
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
-    }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
-  }, [open])
-
-  function setTheme(next: ThemeMode) {
+  function cycleTheme() {
+    const next = themeCycle[mode]
     setMode(next)
     applyThemeMode(next)
     window.localStorage.setItem('theme', next === 'system' ? 'auto' : next)
-    setOpen(false)
   }
 
-  const activeOption = themeOptions.find((o) => o.value === mode) ?? themeOptions[1]
+  const current = themeMeta[mode]
 
   return (
-    <div ref={ref} className="relative inline-flex items-center rounded-full border border-border bg-secondary shadow-sm">
-      {open ? (
-        <div className="inline-flex items-center gap-0.5 p-1" role="radiogroup" aria-label={m.theme_group_label()}>
-          {themeOptions.map((opt) => (
-            <button
-              key={opt.value}
-              type="button"
-              role="radio"
-              aria-checked={mode === opt.value}
-              aria-label={opt.labelFn()}
-              title={opt.labelFn()}
-              onClick={() => setTheme(opt.value)}
-              className={`rounded-full p-1.5 transition-colors ${mode === opt.value ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
-            >
-              {opt.icon}
-            </button>
-          ))}
-        </div>
-      ) : (
-        <button
-          type="button"
-          aria-label={activeOption.labelFn()}
-          title={activeOption.labelFn()}
-          onClick={() => setOpen(true)}
-          className="rounded-full p-1.5 text-foreground transition-colors hover:text-foreground/80"
-        >
-          {activeOption.icon}
-        </button>
-      )}
-    </div>
+    <button
+      type="button"
+      onClick={cycleTheme}
+      aria-label={current.labelFn()}
+      title={current.labelFn()}
+      className="inline-flex items-center justify-center rounded-full border border-border bg-secondary p-1.5 text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+    >
+      {current.icon}
+    </button>
   )
 }
