@@ -7,6 +7,11 @@ declare module "@/paraglide/messages.js" {
   export const nav_contact: MessageFn;
   export const nav_download_cv: MessageFn;
 
+  export const seo_title: (inputs?: { name?: string; role?: string }, options?: { locale?: "es" | "en" }) => string;
+  export const seo_description: MessageFn;
+  export const seo_keywords: MessageFn;
+  export const seo_og_alt: (inputs?: { name?: string; role?: string }, options?: { locale?: "es" | "en" }) => string;
+
   export const hero_kicker: MessageFn;
   export const hero_greeting: (inputs?: { name?: string }, options?: { locale?: "es" | "en" }) => string;
   export const hero_cta: MessageFn;
@@ -86,6 +91,7 @@ declare module "@/paraglide/messages.js" {
 declare module "@/paraglide/runtime.js" {
   export function getLocale(): "es" | "en";
   export function setLocale(locale: "es" | "en"): void;
+  export const baseLocale: "es";
   export const locales: readonly ["es", "en"];
   export function localizeUrl(url: URL): URL;
   export function deLocalizeUrl(url: URL): URL;

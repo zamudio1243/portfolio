@@ -35,7 +35,16 @@ const config = defineConfig({
         },
       ],
     }),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+      },
+      sitemap: {
+        enabled: true,
+        host: "https://hectorzamudio.dev",
+      },
+    }),
     viteReact(),
     netlify(),
   ],

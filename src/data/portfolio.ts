@@ -3,10 +3,12 @@ import type { PortfolioData } from "./interfaces/data";
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Héctor Mauricio Zamudio Domínguez",
+    role: "Fullstack Developer",
     profileImage: "/profile.jpg",
     email: "zamudio1243@gmail.com",
     resumeUrl: "/resume.pdf",
     location: "Zacatecas, Mexico",
+    siteUrl: "https://hectorzamudio.dev",
   },
   socialLinks: [
     {

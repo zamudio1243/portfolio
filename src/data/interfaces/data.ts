@@ -27,10 +27,12 @@ export interface Project {
 
 export interface PersonalInfo {
   name: string;
+  role: string;
   profileImage: string;
   email: string;
   resumeUrl: string;
   location?: string;
+  siteUrl: string;
 }
 
 export interface Certification {

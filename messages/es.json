@@ -8,6 +8,11 @@
   "nav_contact": "Contacto",
   "nav_download_cv": "Descargar CV",
 
+  "seo_title": "{name} — {role}",
+  "seo_description": "Desarrollador Fullstack con más de 5 años de experiencia construyendo backends serverless en AWS, APIs robustas con Node.js y NestJS, e interfaces modernas con React y Next.js.",
+  "seo_keywords": "Desarrollador Fullstack, Backend Developer, Node.js, NestJS, TypeScript, AWS, Serverless, React, Next.js, GraphQL, PostgreSQL, Flutter, Portafolio",
+  "seo_og_alt": "{name} — {role}",
+
   "hero_kicker": "01 // Introducción",
   "hero_greeting": "Hola, soy {name}",
   "hero_cta": "Hablemos",
