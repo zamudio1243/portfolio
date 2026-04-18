@@ -1,3 +1,4 @@
+import { Button } from '#/components/ui/button'
 import { getLocale, locales, setLocale } from '@/paraglide/runtime.js'
 
 const localeLabels: Record<string, string> = { es: 'ES', en: 'EN' }
@@ -8,14 +9,15 @@ export default function LanguageSwitcher() {
   const next = locales[(currentIndex + 1) % locales.length]
 
   return (
-    <button
-      type="button"
+    <Button
+      size="icon"
       onClick={() => setLocale(next)}
       aria-label={`Switch to ${localeLabels[next] ?? next}`}
       title={`Switch to ${localeLabels[next] ?? next}`}
-      className="inline-flex items-center justify-center rounded-full border border-border bg-secondary px-2.5 py-1.5 text-xs font-semibold text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+      variant="outline"
+      className="border-outline-variant/40"
     >
       {localeLabels[current] ?? current}
-    </button>
+    </Button>
   )
 }
