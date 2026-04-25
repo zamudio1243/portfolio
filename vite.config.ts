@@ -39,6 +39,10 @@ const config = defineConfig({
       prerender: {
         enabled: true,
         crawlLinks: true,
+        filter: ({ path }) =>
+          !/\.(pdf|png|jpe?g|svg|ico|gif|webp|avif|mp4|webm|zip)$/i.test(
+            path.split(/[?#]/)[0],
+          ),
       },
       sitemap: {
         enabled: true,
