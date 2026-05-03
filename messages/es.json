@@ -41,7 +41,7 @@
   "case_study_results": "Resultados",
   "case_study_confidential": "Algunos detalles se omiten por confidencialidad.",
 
-  "project_tms_challenge": "El cliente necesitaba migrar su sistema de gestión de transporte (TMS) a una arquitectura moderna sin perder funcionalidades existentes. El sistema legacy presentaba tiempos de consulta de rutas de hasta 3 minutos, afectando la operación logística diaria.",
+  "project_tms_challenge": "El cliente necesitaba migrar su sistema de gestión de transporte (TMS) a una arquitectura moderna sin perder funcionalidades existentes. El sistema legacy presentaba tiempos de consulta de rutas de hasta minutos, afectando la operación logística diaria.",
   "project_tms_role": "Backend Developer — Lideré la migración hacia una arquitectura serverless con AWS Lambda. Elegí serverless sobre contenedores para optimizar costos: las funciones solo se ejecutan bajo demanda, eliminando servidores permanentes. Diseñé el sistema de forma modular para facilitar mantenimiento y escalabilidad.",
   "project_tms_results": "Tiempos de consulta de rutas reducidos de ~3 minutos a segundos. Costos operativos optimizados al eliminar infraestructura siempre activa. Sistema modular que permite agregar funcionalidades sin afectar las existentes.",
 

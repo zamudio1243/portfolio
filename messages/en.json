@@ -41,7 +41,7 @@
   "case_study_results": "Results",
   "case_study_confidential": "Some details are omitted for confidentiality.",
 
-  "project_tms_challenge": "The client needed to migrate their Transport Management System (TMS) to a modern architecture without losing existing functionality. The legacy system had route query times of up to 3 minutes, impacting daily logistics operations.",
+  "project_tms_challenge": "The client needed to migrate their Transport Management System (TMS) to a modern architecture without losing existing functionality. The legacy system had route query times of up to minutes, impacting daily logistics operations.",
   "project_tms_role": "Backend Developer — I led the migration to a serverless architecture with AWS Lambda. I chose serverless over containers to optimize costs: functions only run on demand, eliminating always-on servers. I designed the system in a modular way for easier maintenance and scalability.",
   "project_tms_results": "Route query times reduced from ~3 minutes to seconds. Operational costs optimized by eliminating always-on infrastructure. Modular system that allows adding features without affecting existing ones.",
 
