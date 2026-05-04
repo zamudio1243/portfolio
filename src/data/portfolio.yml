@@ -18,7 +18,7 @@ cv:
         start_date: 2023-09
         end_date: present
         highlights:
-          - "Lideré la migración del TMS de **Grupo Estrella Roja** hacia una arquitectura serverless, reduciendo tiempos de consulta de rutas de ~3 minutos a segundos."
+          - "Lideré la migración del TMS de **Grupo Estrella Roja** hacia una arquitectura serverless, reduciendo tiempos de consulta de rutas de minutos a milisegundos/segundos."
           - "Diseñé y entregué el backend de un sistema RRHH para 90 empleados, reemplazando procesos manuales en Excel y automatizando vacaciones, altas/bajas, asignación de tareas y reportes de costos, mejorando la visibilidad de PMs sobre esfuerzos del equipo."
           - "Construí un sistema multitenant de control de accesos para 6 parques industriales de **Proximity Parks**, integrando webhooks de cámaras Hikvision y un segundo proveedor para monitoreo en tiempo real de vehículos y paquetes."
           - "Migré base de datos productiva (PostgreSQL) de EC2/Docker a Amazon RDS para **Grupo Excelencia**, reduciendo costos operativos y latencia de queries, y mejorando la seguridad dentro del ecosistema AWS."

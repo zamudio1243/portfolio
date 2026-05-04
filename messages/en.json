@@ -43,7 +43,7 @@
 
   "project_tms_challenge": "The client needed to migrate their Transport Management System (TMS) to a modern architecture without losing existing functionality. The legacy system had route query times of up to minutes, impacting daily logistics operations.",
   "project_tms_role": "Backend Developer — I led the migration to a serverless architecture with AWS Lambda. I chose serverless over containers to optimize costs: functions only run on demand, eliminating always-on servers. I designed the system in a modular way for easier maintenance and scalability.",
-  "project_tms_results": "Route query times reduced from ~3 minutes to seconds. Operational costs optimized by eliminating always-on infrastructure. Modular system that allows adding features without affecting existing ones.",
+  "project_tms_results": "Route query times reduced from minutes to milliseconds/seconds. Operational costs optimized by eliminating always-on infrastructure. Modular system that allows adding features without affecting existing ones.",
 
   "project_proximity_challenge": "The client needed to control vehicle entries and exits across 6 industrial parks. The main challenge was standardizing two different camera vendors (including Hikvision) to achieve unified traceability across all parks.",
   "project_proximity_role": "Backend Developer — I designed and built a multitenant access control system, integrating webhooks from two camera providers into a standardized pipeline for real-time vehicle and package monitoring.",
